@@ -1,0 +1,21 @@
+twinprime
+Copyright 2026 Andrew Tawfeek and contributors.
+
+This repository includes a modified port of work from selberg-sieve4:
+  Copyright (c) 2023 Arend Mellendijk. All rights reserved.
+  Released under the Apache License, Version 2.0.
+  Upstream: https://github.com/amellendijk/selberg-sieve4
+
+TwinPrime/Sieve/Fundamental.lean and TwinPrime/Sieve/ErrorSum.lean identify
+the port and its modifications to work with Lean / Mathlib v4.32.0. The
+upstream license and notices were checked at revision
+64530a38a1e7e32357e1be8462dbfce5e445919a; this is an attribution reference,
+not a claim that the original port was made from that exact revision.
+
+Mathlib is a separate dependency under the Apache License, Version 2.0.
+It is not vendored in this repository. Its contributors and source notices
+remain credited in Mathlib; dependency revisions are in lake-manifest.json.
+Lean and optional computational dependencies retain their own licenses.
+
+Research papers cited in the documentation remain the work of their
+respective authors. Their citation does not imply endorsement of this project.

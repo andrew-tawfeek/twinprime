@@ -1,0 +1,12 @@
+name = "twinprime"
+version = "0.1.0"
+description = "Formal (Lean 4 / Mathlib) and computational work toward the twin prime conjecture"
+defaultTargets = ["TwinPrime"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.0"
+
+[[lean_lib]]
+name = "TwinPrime"

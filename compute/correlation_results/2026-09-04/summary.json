@@ -1,0 +1,258 @@
+{
+  "provenance": {
+    "source_commit": "5cf66a63bbc33b36f3c8d90373d2f6cce108f72a",
+    "working_tree_changes": [
+      " M README.md",
+      " M TwinPrime.lean",
+      " M TwinPrime/Parity.lean",
+      " M compute/parity/src/main.rs",
+      " M compute/twinsieve/src/main.rs",
+      " M docs/PARITY.md",
+      " M docs/PLAN.md",
+      " M docs/RESEARCH_LOG.md",
+      " M scripts/Axioms.lean",
+      "?? PLAN.md",
+      "?? TwinPrime/Analytic/",
+      "?? TwinPrime/ConditionalBilinear.lean",
+      "?? TwinPrime/Correlation.lean",
+      "?? compute/CORRELATION.md",
+      "?? compute/correlation.py",
+      "?? compute/parity/tests/",
+      "?? compute/test_correlation.py",
+      "?? compute/twinsieve/tests/",
+      "?? docs/ANALYTIC_REVIEW.md"
+    ],
+    "script_path": "compute/correlation.py",
+    "script_sha256": "6d92bd4abdd650987f66268cf3462c065d0ad0e6e4b4ddd792cdeeef10bb3b03",
+    "binary_path": "python.exe",
+    "provenance_note": "Before repository packaging, script_path was made repository-relative and binary_path reduced to its basename. Original machine-specific paths are retained in the private backup; numerical results, source_commit, and all recorded hashes are unchanged.",
+    "binary_hash_sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+    "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "arguments": [
+      "--X",
+      "1000",
+      "10000",
+      "100000",
+      "--output-dir",
+      "compute/correlation_results/2026-09-04"
+    ],
+    "created_utc": "2026-09-05T00:59:48.976093+00:00",
+    "arithmetic_precision": {
+      "finite_identities": "Exact arbitrary-precision integer coefficients in formal log-prime products",
+      "displayed_real_values": "IEEE 754 binary64 math.log and math.fsum; no rigorous rounding interval"
+    },
+    "purpose": "Reproducible finite diagnostics; neither an asymptotic estimate nor a proof of twin primes"
+  },
+  "vaughan_verification": {
+    "limit": 2000,
+    "cutoffs": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        13,
+        17
+      ]
+    ],
+    "checks": 8000,
+    "exact_identity": true
+  },
+  "scales": [
+    {
+      "X": 1000,
+      "U": 3,
+      "V": 3,
+      "interval_convention": "positive integers n with X < n <= 2X; shifted member n+2",
+      "cutoff_rule": "floor(X^(1/5)) via integer arithmetic unless explicitly overridden",
+      "values": {
+        "A_U": 1095.8820698452544,
+        "H_U": 3136.8366503185825,
+        "I_UV": 371.7141252570996,
+        "B_UV": -2429.251845749385,
+        "W_2": 1431.7527491573524,
+        "E_pp": 54.36135928030767,
+        "K_UV": 2765.122525061483
+      },
+      "values_over_CX": {
+        "A_U": 0.8300101910918868,
+        "H_U": 2.375808911557981,
+        "I_UV": 0.2815325851437324,
+        "B_UV": -1.8398912110912455,
+        "W_2": 1.08439530641489,
+        "E_pp": 0.041172753388176324,
+        "K_UV": 2.0942763264142483
+      },
+      "C_approximation": 1.3203236316937392,
+      "direct_twin_count": 26,
+      "twin_weighted_mass": 1377.3913898770447,
+      "PP_upper_bound_log_squared_times_twin_count": 1502.511748596401,
+      "identity_residual_exact_coefficients": [],
+      "identity_residual_binary64": -2.8421709430404007e-13,
+      "checks": {
+        "D_exact_coefficient_identity": true,
+        "I_direct_equals_progressions": true,
+        "B_divisors_equals_factor_pairs": true,
+        "B_equals_sum_of_boxes": true,
+        "box_factor_count_equals_divisor_count": true,
+        "coefficient_bounds": true,
+        "beta_exact_divisor_identity": true
+      },
+      "factor_pair_count": 4783,
+      "factor_box_count": 22,
+      "B_absolute_sum": 7069.648081133994,
+      "B_shifted_proper_prime_power_signed": -27.576814069563856,
+      "B_shifted_proper_prime_power_absolute": 36.222258066322816,
+      "exact_coefficient_sha256": {
+        "A_U": "063253565eb193773ad1edf29ea89d8ae830fba95790ba58750ea841c64987a0",
+        "H_U": "ec5cf44092016b3d12e36a0ecec24ece12efdacd81f4899e5b91956fdb060b7d",
+        "I_UV": "89c6f6c7e20f218b94da66fb56ae4ad8d57c24c41b1ddcc7475067b4f847cb59",
+        "B_UV": "5f8326df9429c4a27a4ece92c0a47115fd817524f2337349c8a0d545440cdff5",
+        "W_2": "4cffcfda655ce570c764ddd2d9c212f551c2ac5725d58a601fef048ad161c7ed",
+        "E_pp": "de079cc7cb2317ec89c8aba2b975124d84c64805170da1499ebb671b7f88f09a"
+      },
+      "exact_coefficient_nonzero_counts": {
+        "A_U": 140,
+        "H_U": 190,
+        "I_UV": 48,
+        "B_UV": 112,
+        "W_2": 28,
+        "E_pp": 2
+      },
+      "remaining_analytic_obligation": "No estimate is proved for (B*) or for any individual box as X tends to infinity."
+    },
+    {
+      "X": 10000,
+      "U": 6,
+      "V": 6,
+      "interval_convention": "positive integers n with X < n <= 2X; shifted member n+2",
+      "cutoff_rule": "floor(X^(1/5)) via integer arithmetic unless explicitly overridden",
+      "values": {
+        "A_U": 13935.403783054277,
+        "H_U": 19276.219489703006,
+        "I_UV": 3454.1323135899934,
+        "B_UV": -16872.558876535106,
+        "W_2": 12884.932082632184,
+        "E_pp": 263.6558836265272,
+        "K_UV": 15822.087176113011
+      },
+      "values_over_CX": {
+        "A_U": 1.0554536364071319,
+        "H_U": 1.459961711430936,
+        "I_UV": 0.26161254942918494,
+        "B_UV": -1.2779108448502605,
+        "W_2": 0.9758919535586225,
+        "E_pp": 0.019969034659199716,
+        "K_UV": 1.198349162001751
+      },
+      "C_approximation": 1.3203236316937392,
+      "direct_twin_count": 137,
+      "twin_weighted_mass": 12621.276199005657,
+      "PP_upper_bound_log_squared_times_twin_count": 13437.103344705538,
+      "identity_residual_exact_coefficients": [],
+      "identity_residual_binary64": -4.547473508864641e-13,
+      "checks": {
+        "D_exact_coefficient_identity": true,
+        "I_direct_equals_progressions": true,
+        "B_divisors_equals_factor_pairs": true,
+        "B_equals_sum_of_boxes": true,
+        "box_factor_count_equals_divisor_count": true,
+        "coefficient_bounds": true,
+        "beta_exact_divisor_identity": true
+      },
+      "factor_pair_count": 58509,
+      "factor_box_count": 28,
+      "B_absolute_sum": 118144.6475694193,
+      "B_shifted_proper_prime_power_signed": -174.26117655933857,
+      "B_shifted_proper_prime_power_absolute": 320.609159362325,
+      "exact_coefficient_sha256": {
+        "A_U": "608a03405a8b0184e7beb65ca73cda5ac6512bde21f8ea264faf10a8175a4346",
+        "H_U": "f8e35ecc874607c0e6517ec32ca5e196fcc961d9e8097e1261321b260e220682",
+        "I_UV": "575ed17292219c50dec909cc521702ffc16162d810efa5fb2fc1f130fa9b1ee4",
+        "B_UV": "d731497042f12256f6794fa4ca7524165bd56cf2e4ab2d3cb5eee7675573bb4b",
+        "W_2": "6a5034f65a7353e7e8e53c52081a6e9e0dbc1d89912a81df17732e999ec1a663",
+        "E_pp": "cb6dfe52d0737e3dd9c54c2482388dbc5c1e6de19094769c34a4e84ba0acf1bf"
+      },
+      "exact_coefficient_nonzero_counts": {
+        "A_U": 1571,
+        "H_U": 1960,
+        "I_UV": 440,
+        "B_UV": 907,
+        "W_2": 144,
+        "E_pp": 7
+      },
+      "remaining_analytic_obligation": "No estimate is proved for (B*) or for any individual box as X tends to infinity."
+    },
+    {
+      "X": 100000,
+      "U": 10,
+      "V": 10,
+      "interval_convention": "positive integers n with X < n <= 2X; shifted member n+2",
+      "cutoff_rule": "floor(X^(1/5)) via integer arithmetic unless explicitly overridden",
+      "values": {
+        "A_U": 146960.5698042383,
+        "H_U": 81103.90210845708,
+        "I_UV": 26842.007614915863,
+        "B_UV": -68457.66897113214,
+        "W_2": 132764.79532664738,
+        "E_pp": 313.01291788984696,
+        "K_UV": 54261.89449354122
+      },
+      "values_over_CX": {
+        "A_U": 1.113064753796114,
+        "H_U": 0.6142728961414958,
+        "I_UV": 0.20329869867194883,
+        "B_UV": -0.5184915828804275,
+        "W_2": 1.0055473683852336,
+        "E_pp": 0.002370728739349362,
+        "K_UV": 0.410974197469547
+      },
+      "C_approximation": 1.3203236316937392,
+      "direct_twin_count": 936,
+      "twin_weighted_mass": 132451.78240875754,
+      "PP_upper_bound_log_squared_times_twin_count": 139453.1925212016,
+      "identity_residual_exact_coefficients": [],
+      "identity_residual_binary64": 7.275957614183426e-12,
+      "checks": {
+        "D_exact_coefficient_identity": true,
+        "I_direct_equals_progressions": true,
+        "B_divisors_equals_factor_pairs": true,
+        "B_equals_sum_of_boxes": true,
+        "box_factor_count_equals_divisor_count": true,
+        "coefficient_bounds": true,
+        "beta_exact_divisor_identity": true
+      },
+      "factor_pair_count": 719569,
+      "factor_box_count": 33,
+      "B_absolute_sum": 1739552.083253261,
+      "B_shifted_proper_prime_power_signed": -772.0929955713754,
+      "B_shifted_proper_prime_power_absolute": 1929.0326903584348,
+      "exact_coefficient_sha256": {
+        "A_U": "40bf6ca8c80ae619c15c48e840cfa3003e8132e0823e09bedff7d69e21e647ca",
+        "H_U": "2e6763db66322cba3c691058c08e1f9a5867152e3f7f4de3845830b48c0651b6",
+        "I_UV": "3a7433b8074aec95eda96889c2fd5b42df9f082a83cf7bed1648c4e9cacc6500",
+        "B_UV": "3275fb08e5285a8e4c55e9f64b2e1015b6736a552369eb2408295ec9f40ceacd",
+        "W_2": "95e62a5e1933a62ab4ae3ad7fd8f6173bd699251000c14392732d75838e668cf",
+        "E_pp": "0192701a5e8d6200485eb05bb65c4b0ac9796543dc251dce4d8b1a5e85d1e048"
+      },
+      "exact_coefficient_nonzero_counts": {
+        "A_U": 14223,
+        "H_U": 17552,
+        "I_UV": 4810,
+        "B_UV": 7075,
+        "W_2": 941,
+        "E_pp": 5
+      },
+      "remaining_analytic_obligation": "No estimate is proved for (B*) or for any individual box as X tends to infinity."
+    }
+  ]
+}

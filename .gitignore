@@ -1,0 +1,24 @@
+.lake/
+*.olean
+*.ilean
+*.trace
+__pycache__/
+*.pyc
+compute/target/
+compute/**/target/
+*.log
+data/*.bin
+data/*.npy
+.DS_Store
+# Local environments, credentials, editor state, and scratch files
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db

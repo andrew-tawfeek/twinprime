@@ -1,0 +1,1571 @@
+import TwinPrime
+#print axioms TwinPrime.brun
+#print axioms TwinPrime.twinCount_le
+#print axioms TwinPrime.twinCount_isBigO
+#print axioms TwinPrime.clement
+#print axioms TwinPrime.twinPrimeConjecture_iff_boundedGaps_two
+#print axioms SelbergSieve.selberg_bound_simple
+#print axioms TwinPrime.twinPrimeConjecture_of_hardyLittlewood
+#print axioms TwinPrime.twinCount_div_tendsto_zero
+#print axioms TwinPrime.brunConstant_pos
+#print axioms TwinPrime.twinPrimeConjecture_of_hardyLittlewoodConjecture
+#print axioms TwinPrime.twinPrimeConstant_pos
+#print axioms TwinPrime.twinRough_infinite
+#print axioms TwinPrime.twinRough_count_ge_of_large
+#print axioms TwinPrime.brun_almostPrime_infinite
+#print axioms TwinPrime.Sieve.brun_count_ge
+#print axioms TwinPrime.brun_bounded_infinite
+#print axioms TwinPrime.Sieve.siftedSum_ge_of_blocks
+#print axioms TwinPrime.parity_obstruction
+#print axioms TwinPrime.parity_obstruction_general
+#print axioms TwinPrime.sum_lowerMoebius_le
+#print axioms TwinPrime.parity_obstruction_upper
+#print axioms TwinPrime.N2_eq_twinCount_sub
+#print axioms TwinPrime.twinPrimeConjecture_iff_cofinal_N2_pos
+#print axioms TwinPrime.W2_sub_Epp_eq_prime_sum
+#print axioms TwinPrime.W2_sub_Epp_le_log_sq_mul_N2
+#print axioms TwinPrime.twinPrimeConjecture_iff_cofinal_W2_gt_Epp
+#print axioms TwinPrime.Epp_le_sqrt_mul_log_sq
+#print axioms TwinPrime.tendsto_Epp_div
+#print axioms TwinPrime.twinPrimeConjecture_of_cofinal_W2_linear
+#print axioms TwinPrime.Analytic.vaughanIdentity
+#print axioms TwinPrime.Analytic.vaughanBeta_le_log
+#print axioms TwinPrime.Analytic.abs_vaughanCoefficient_le_log
+#print axioms TwinPrime.Analytic.vaughanBilinear_apply
+#print axioms TwinPrime.Analytic.truncatedMoebiusLog_eq
+#print axioms TwinPrime.Analytic.correlation_decomposition
+#print axioms TwinPrime.Analytic.mixedCorrelation_eq_progressions
+#print axioms TwinPrime.Analytic.typeITerm_eq_progressions
+#print axioms TwinPrime.Analytic.primaryCutoff_support
+#print axioms TwinPrime.Analytic.bilinearTerm_eq_pair_sum
+#print axioms TwinPrime.Analytic.bilinearPairs_left_le_div
+#print axioms TwinPrime.Analytic.bilinearPairs_right_le_div
+#print axioms TwinPrime.four_obligation_budget
+#print axioms TwinPrime.twinPrimeConjecture_of_bilinear_budget
+#print axioms TwinPrime.twinPrimeConjecture_of_bilinear_budget_twinConstant
+#print axioms TwinPrime.twinPrimeConjecture_of_bilinear_estimates
+#print axioms TwinPrime.twinPrimeConjecture_of_primary_estimates
+#print axioms TwinPrime.Analytic.totientTypeIMain_eq_primePowerCorrection
+#print axioms TwinPrime.Analytic.oddMoebiusTotientSumDivisible_recurrence
+#print axioms TwinPrime.Analytic.oddMoebiusTotientSumDivisible_abs_le
+#print axioms TwinPrime.Analytic.oddMoebiusTotientSumDivisible_expansion
+#print axioms TwinPrime.Analytic.tendsto_oddMoebiusTotientSumDivisible
+#print axioms TwinPrime.Analytic.primePowerTotientWeight_le
+#print axioms TwinPrime.Analytic.tendsto_sharedPrimeCorrection
+#print axioms TwinPrime.Analytic.oddMangoldtTotientSum_le_log_sq
+#print axioms TwinPrime.Analytic.tendsto_totientTypeIMain_same_cutoff
+#print axioms TwinPrime.Analytic.shiftedProgression_sub_main_eq_errors
+#print axioms TwinPrime.Analytic.weighted_odd_progression_error_le_of_cap
+#print axioms TwinPrime.Analytic.eventually_primaryCutoff_sq_le_BV_range
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_log_mul_sum_error_div
+#print axioms TwinPrime.Analytic.even_shiftedProgression_le
+#print axioms TwinPrime.Analytic.evenWeightBudget_le
+#print axioms TwinPrime.Analytic.tendsto_evenWeightBudget_div
+#print axioms TwinPrime.Analytic.mixedCorrelation_error_le_primary
+#print axioms TwinPrime.Analytic.tendsto_mixedCorrelation_div_of_inputs
+#print axioms TwinPrime.Analytic.vaughanCoefficient_odd_totient_sum_eq
+#print axioms TwinPrime.Analytic.typeICorrelation_error_le_primary
+#print axioms TwinPrime.Analytic.tendsto_typeITerm_div_of_inputs
+#print axioms TwinPrime.Analytic.discrete_abel_Ioc
+#print axioms TwinPrime.Analytic.abs_sum_Ioc_log_mul_le_of_partial_sums
+#print axioms TwinPrime.Analytic.log_dyadic_le_seven_log_primaryCutoff
+#print axioms TwinPrime.Analytic.tendsto_primary_mul_log_of_mul_log_sq_tendsto_zero
+#print axioms TwinPrime.Analytic.logarithmicCorrection_error_le_primary
+#print axioms TwinPrime.Analytic.tendsto_logarithmicCorrection_div_of_inputs
+#print axioms TwinPrime.Analytic.tendsto_typeICorrection_div_of_inputs
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_zero_of_prime
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_mangoldt_sub_log_of_rough
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_neg_log_of_rough_not_prime_pow
+#print axioms TwinPrime.Analytic.abs_vaughanBilinear_le_card_divisors_mul_log
+#print axioms TwinPrime.Analytic.vaughanBilinear_prime_pow
+#print axioms TwinPrime.Analytic.abs_vaughanBilinear_prime_pow_le_log
+#print axioms TwinPrime.twinPrimeConjecture_of_analytic_inputs
+#print axioms TwinPrime.twinPrimeConjecture_of_classical_inputs_and_bilinear
+#print axioms TwinPrime.Analytic.card_divisors_cube_le
+#print axioms TwinPrime.Analytic.card_divisors_le_sixteen_cuberoot
+#print axioms TwinPrime.Analytic.abs_bilinearTerm_sub_primeSupport_le
+#print axioms TwinPrime.Analytic.tendsto_bilinearExceptionalBound_div
+#print axioms TwinPrime.Analytic.tendsto_bilinearTerm_sub_primeSupport_div
+#print axioms TwinPrime.Analytic.oddMoebiusTotient_eq_convolution
+#print axioms TwinPrime.Analytic.smoothingCorrection_two_pow
+#print axioms TwinPrime.Analytic.smoothingCorrection_odd_prime_pow
+#print axioms TwinPrime.Analytic.oddMoebiusTotientSum_eq_smoothingConvolution
+#print axioms TwinPrime.Analytic.smoothedTotientSum_eq_smoothingConvolution
+#print axioms TwinPrime.Analytic.summable_norm_smoothingCorrection
+#print axioms TwinPrime.Analytic.tsum_smoothingCorrection
+#print axioms TwinPrime.Analytic.summable_sqrt_mul_abs_smoothingCorrection
+#print axioms TwinPrime.Analytic.summable_log_sq_mul_abs_smoothingCorrection
+#print axioms TwinPrime.Analytic.reciprocalCoefficientSum_tail_le_log_five
+#print axioms TwinPrime.Analytic.exists_normalizedMoebiusSum_limit_of_mertens_log_six
+#print axioms TwinPrime.Analytic.smoothedMoebiusSum_eq_log_mul_sub_moment
+#print axioms TwinPrime.Analytic.moebius_hyperbola
+#print axioms TwinPrime.Analytic.normalizedMoebiusSum_le_of_mertens_range
+#print axioms TwinPrime.Analytic.tendsto_normalizedMoebiusSum_of_mertens_sublinear
+#print axioms TwinPrime.Analytic.normalizedMoebiusSum_abs_le_log_five_of_mertens
+#print axioms TwinPrime.Analytic.tendsto_normalizedMoebiusSum_log_sq_of_mertens
+#print axioms TwinPrime.prime_or_semiprime_of_rough
+#print axioms TwinPrime.rough_liouville_weighted_identity
+#print axioms TwinPrime.rough_parity_identity
+#print axioms TwinPrime.twinPrimeConjecture_of_rough_distribution_and_parity
+#print axioms TwinPrime.Analytic.normalizedMoebius_harmonic_sum
+#print axioms TwinPrime.Analytic.abs_harmonicRemainder_le
+#print axioms TwinPrime.Analytic.harmonicRemainder_variation_le
+#print axioms TwinPrime.Analytic.abs_moebiusHarmonicError_le
+#print axioms TwinPrime.Analytic.tendsto_moebiusHarmonicError_of_mertens_log_six
+#print axioms TwinPrime.Analytic.tendsto_smoothedMoebiusSum_of_mertens_log_six
+#print axioms TwinPrime.Analytic.tendsto_oddMoebiusTotientSum_log_sq_of_normalized
+#print axioms TwinPrime.Analytic.tendsto_smoothedTotientSum_of_smoothedMoebius
+#print axioms TwinPrime.Analytic.MertensLogSix.tendsto_odd_totient_log_sq
+#print axioms TwinPrime.Analytic.MertensLogSix.tendsto_smoothed_totient
+#print axioms TwinPrime.Analytic.MertensLogSix.tendsto_mixed_div
+#print axioms TwinPrime.Analytic.MertensLogSix.tendsto_correction_div
+#print axioms TwinPrime.twinPrimeConjecture_of_bv_mertens_and_bilinear
+#print axioms TwinPrime.Analytic.progressionPsi_modulus_one
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.maximal_psi_error
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.psi_error
+#print axioms TwinPrime.Analytic.arithmeticLogWeight_mul
+#print axioms TwinPrime.Analytic.arithmeticLogWeight_twice_moebius
+#print axioms TwinPrime.Analytic.moebius_mul_centeredSelbergCoefficient
+#print axioms TwinPrime.Analytic.moebius_mul_centeredSelbergCoefficient_apply
+#print axioms TwinPrime.Analytic.weighted_sum_sq_le
+#print axioms TwinPrime.Analytic.sum_sq_eq_diagonal_add_offDiagonal
+#print axioms TwinPrime.Analytic.bilinearBox_eq_filtered_pair_sum
+#print axioms TwinPrime.Analytic.dispersion_secondMoment_eq
+#print axioms TwinPrime.Analytic.bilinearBox_sq_le_dispersion
+#print axioms TwinPrime.Analytic.dispersion_diagonal_saving
+#print axioms TwinPrime.Analytic.dispersion_diagonal_div_sq_le
+#print axioms TwinPrime.Analytic.tendsto_dispersion_log_pow_div_primaryCutoff
+#print axioms TwinPrime.Analytic.tendsto_mul_dispersion_log_pow_of_primaryCutoff_bound
+#print axioms TwinPrime.Analytic.tendsto_primary_dispersion_diagonal
+#print axioms TwinPrime.Analytic.tendsto_primary_dispersion_diagonal_sqrt
+#print axioms TwinPrime.Analytic.psi_real_error_of_nat_error
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.psi_real_log_six
+#print axioms TwinPrime.Analytic.exists_primeReciprocalSum_center_bound_of_psi_log_six
+#print axioms TwinPrime.Analytic.exists_primeReciprocalSum_center_of_psi_log_six
+#print axioms TwinPrime.Analytic.sum_Ioc_convolution_hyperbola
+#print axioms TwinPrime.Analytic.arithmeticSummatory_convolution_hyperbola
+#print axioms TwinPrime.Analytic.initialIntervalSup_le_of_contraction
+#print axioms TwinPrime.Analytic.bddAbove_of_eventually_initialIntervalSup_contraction
+#print axioms TwinPrime.Analytic.exists_abs_bound_of_eventually_initialIntervalSup_contraction
+#print axioms TwinPrime.Analytic.primeReciprocalSum_le_log
+#print axioms TwinPrime.Analytic.centeredSelbergReciprocalMass_le
+#print axioms TwinPrime.Analytic.centeredSelbergReciprocalMass_le_log_sq
+#print axioms TwinPrime.Analytic.abs_log_sub_log_natFloor_le
+#print axioms TwinPrime.Analytic.primeReciprocal_real_center_bound_of_nat
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.real_primeReciprocal_center
+#print axioms TwinPrime.Analytic.centeredSelbergSummatory_eq
+#print axioms TwinPrime.Analytic.moebiusSelberg_hyperbola
+#print axioms TwinPrime.Analytic.vonMangoldt_convolution_sqrt
+#print axioms TwinPrime.Analytic.sum_log_sub_main_bounds
+#print axioms TwinPrime.Analytic.abs_sum_log_sub_main_le_one_add_log
+#print axioms TwinPrime.Analytic.log_nat_le_fourteen_log_primaryCutoff
+#print axioms TwinPrime.Analytic.tendsto_primaryCutoff_mul_log_pow_div
+#print axioms TwinPrime.Analytic.eventually_sum_inverse_log_five_le
+#print axioms TwinPrime.Analytic.abs_primeLogSummatory_sub_sum_log_le
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.primeLog_nat_error
+#print axioms TwinPrime.Analytic.primeLog_real_error_of_nat_error
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.primeLog_real_error
+#print axioms TwinPrime.Analytic.centeredSelbergSummatory_sqrt_error
+#print axioms TwinPrime.Analytic.abs_primeConvolutionError_le
+#print axioms TwinPrime.Analytic.exists_centeredSelbergSummatory_bound_of_prime_errors
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.centeredSelberg_error
+#print axioms TwinPrime.Analytic.abs_mertensReal_le
+#print axioms TwinPrime.Analytic.abs_moebiusSelberg_tail_le
+#print axioms TwinPrime.Analytic.abs_moebiusSelberg_boundary_le
+#print axioms TwinPrime.Analytic.abs_moebiusLogSqSummatory_le_hyperbola_head
+#print axioms TwinPrime.Analytic.eventually_moebiusLogSqSummatory_le_power_head
+#print axioms TwinPrime.Analytic.mertens_mul_log_sq_eq
+#print axioms TwinPrime.Analytic.abs_mertens_mul_log_sq_le
+#print axioms TwinPrime.Analytic.eventually_mertens_log_six_le_logSq_sum
+#print axioms TwinPrime.Analytic.abs_mertensReal_mul_log_sq_le
+#print axioms TwinPrime.Analytic.eventually_mertensReal_log_six_le_logSq_sum
+#print axioms TwinPrime.Analytic.weightedMertens_bddAbove
+#print axioms TwinPrime.Analytic.mertensSup_isLUB
+#print axioms TwinPrime.Analytic.abs_mertensReal_le_sup
+#print axioms TwinPrime.Analytic.selberg_power_head_le_mertensSup_log_sq
+#print axioms TwinPrime.Analytic.normalized_selberg_power_head_le
+#print axioms TwinPrime.Analytic.exists_small_parameter_eventual_contraction
+#print axioms TwinPrime.Analytic.eventually_weightedMertens_le_sup_coefficient
+#print axioms TwinPrime.Analytic.mertensLogSix_of_centeredSelberg_bound
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.mertensLogSix
+#print axioms TwinPrime.twinPrimeConjecture_of_bv_and_bilinear
+#print axioms TwinPrime.Analytic.noncoprimeMangoldtMass_nonneg
+#print axioms TwinPrime.Analytic.characterPsi_one
+#print axioms TwinPrime.Analytic.totient_mul_progressionPsi_eq_character_sum
+#print axioms TwinPrime.Analytic.progressionPsi_eq_character_sum
+#print axioms TwinPrime.Analytic.characterMaxError_nonneg
+#print axioms TwinPrime.Analytic.norm_centeredCharacterPsi_le_max
+#print axioms TwinPrime.Analytic.totient_mul_progressionError_eq_centeredCharacter_sum
+#print axioms TwinPrime.Analytic.abs_progressionError_le_character_sum
+#print axioms TwinPrime.Analytic.progressionMaxError_le_characterMaxError
+#print axioms TwinPrime.Analytic.noncoprimeMangoldtMass_mono
+#print axioms TwinPrime.Analytic.noncoprimeMangoldtMass_le_log_add_psi_sub_theta
+#print axioms TwinPrime.Analytic.noncoprimeMangoldtMass_le
+#print axioms TwinPrime.Analytic.noncoprimeMangoldtMass_le_uniform
+#print axioms TwinPrime.Analytic.sum_noncoprimeMangoldtMass_le_uniform
+#print axioms TwinPrime.Analytic.norm_characterPsi_sub_primitive_le
+#print axioms TwinPrime.Analytic.primitiveCharacter_principal_iff
+#print axioms TwinPrime.Analytic.norm_centeredCharacterPsi_sub_primitive_le
+#print axioms TwinPrime.Analytic.characterMaxError_le_primitive
+#print axioms TwinPrime.Analytic.progressionMaxError_le_primitiveCharacter_sum
+#print axioms TwinPrime.Analytic.sum_progressionMaxError_le_primitiveCharacter_sum
+#print axioms TwinPrime.Analytic.eventually_sum_progressionMaxError_le_primitiveCharacter_sum
+#print axioms TwinPrime.Analytic.characterExceptionBudget_le
+#print axioms TwinPrime.Analytic.characterExceptionBudget_le_log_saving
+#print axioms TwinPrime.Analytic.eventually_characterExceptionBudget_le
+#print axioms TwinPrime.Analytic.exists_exponent_characterExceptionBudget_le
+#print axioms TwinPrime.Analytic.sum_noncoprimeMangoldtMass_le_characterExceptionBudget
+#print axioms TwinPrime.Analytic.eventually_sum_noncoprimeMangoldtMass_le
+#print axioms TwinPrime.Analytic.character_inv_apply_eq_conj
+#print axioms TwinPrime.Analytic.primitive_gaussSum_mul_conj
+#print axioms TwinPrime.Analytic.norm_primitive_gaussSum_sq
+#print axioms TwinPrime.Analytic.norm_primitive_gaussSum
+#print axioms TwinPrime.Analytic.unit_character_orthogonality
+#print axioms TwinPrime.Analytic.unit_character_parseval
+#print axioms TwinPrime.Analytic.sum_units_character_mul_eq
+#print axioms TwinPrime.Analytic.primitive_character_additive_factorization
+#print axioms TwinPrime.Analytic.primitive_character_largeSieve_transfer
+#print axioms TwinPrime.Analytic.characterMaxError_primitive_changeLevel
+#print axioms TwinPrime.Analytic.sum_characterMaxError_primitiveCharacter_eq
+#print axioms TwinPrime.Analytic.sum_Ioc_divisors_eq_sum_multiples
+#print axioms TwinPrime.Analytic.sum_primitiveCharacter_errors_eq_conductor_sum
+#print axioms TwinPrime.Analytic.reciprocalTotient_eq_convolution
+#print axioms TwinPrime.Analytic.totientReciprocalCorrection_prime
+#print axioms TwinPrime.Analytic.totientReciprocalCorrection_prime_pow_succ_succ
+#print axioms TwinPrime.Analytic.hasSum_norm_totientReciprocalCorrection_prime_pow
+#print axioms TwinPrime.Analytic.summable_norm_totientReciprocalCorrection
+#print axioms TwinPrime.Analytic.one_le_totientReciprocalConstant
+#print axioms TwinPrime.Analytic.sum_reciprocalTotient_eq_harmonic_convolution
+#print axioms TwinPrime.Analytic.sum_reciprocalTotient_le_log
+#print axioms TwinPrime.Analytic.sum_reciprocalTotient_multiples_le_log
+#print axioms TwinPrime.Analytic.sum_primitiveCharacter_errors_le_weighted_conductor_sum
+#print axioms TwinPrime.Analytic.sum_progressionMaxError_le_weighted_conductor_sum
+#print axioms TwinPrime.Analytic.eventually_sum_progressionMaxError_le_weighted_conductor_sum
+#print axioms TwinPrime.Analytic.sum_Ioc_div_eq_cumulative
+#print axioms TwinPrime.Analytic.sum_Ico_reciprocal_product_eq
+#print axioms TwinPrime.Analytic.sum_Ico_reciprocal_succ_le_log_ratio
+#print axioms TwinPrime.Analytic.sum_Ioc_div_le_of_cumulative_quadratic
+#print axioms TwinPrime.Analytic.norm_geom_sum_le_min
+#print axioms TwinPrime.Analytic.norm_geom_sum_Ico_le_min
+#print axioms TwinPrime.Analytic.four_mul_norm_unitAddCircle_le_chord
+#print axioms TwinPrime.Analytic.norm_additiveKernel_le_min
+#print axioms TwinPrime.Analytic.norm_sum_Ico_additivePhase_le_min
+#print axioms TwinPrime.Analytic.norm_sum_Ico_phase_mul_conj_le
+#print axioms TwinPrime.Analytic.finite_schur_bound
+#print axioms TwinPrime.Analytic.norm_sum_smul_sq_le_gram_row
+#print axioms TwinPrime.Analytic.sum_norm_inner_sq_le_gram_row
+#print axioms TwinPrime.Analytic.finite_large_sieve
+#print axioms TwinPrime.Analytic.finite_large_sieve_finset
+#print axioms TwinPrime.Analytic.finite_additive_large_sieve_of_kernel_rows
+#print axioms TwinPrime.Analytic.orderEmbOfFin_ge_mul_of_separated
+#print axioms TwinPrime.Analytic.sum_reciprocal_le_harmonic_of_separated
+#print axioms TwinPrime.Analytic.sum_reciprocal_abs_le_of_separated
+#print axioms TwinPrime.Analytic.rational_frequency_dist_ge
+#print axioms TwinPrime.Analytic.rational_frequency_dist_ge_inv_sq
+#print axioms TwinPrime.Analytic.reduced_rational_frequency_unique
+#print axioms TwinPrime.Analytic.unit_rational_frequency_eq_iff
+#print axioms TwinPrime.Analytic.unit_rational_frequency_dist_ge_inv_sq
+#print axioms TwinPrime.Analytic.sum_reciprocal_unitAddCircle_dist_le
+#print axioms TwinPrime.Analytic.additive_kernel_row_le_of_separated
+#print axioms TwinPrime.Analytic.additive_large_sieve_of_separated
+#print axioms TwinPrime.Analytic.additive_large_sieve_of_separated_log
+#print axioms TwinPrime.Analytic.card_rationalFrequencyFamily
+#print axioms TwinPrime.Analytic.sum_totient_Icc_le_sq
+#print axioms TwinPrime.Analytic.harmonic_totient_sum_le_log
+#print axioms TwinPrime.Analytic.rationalFrequencyFamily_separated
+#print axioms TwinPrime.Analytic.stdAddChar_mul_eq_additivePhase
+#print axioms TwinPrime.Analytic.rational_additive_large_sieve
+#print axioms TwinPrime.Analytic.primitive_character_large_sieve
+#print axioms TwinPrime.Analytic.rational_additive_large_sieve_log
+#print axioms TwinPrime.Analytic.primitive_character_large_sieve_log
+#print axioms TwinPrime.Analytic.residue_frequency_dist_ge_inv
+#print axioms TwinPrime.Analytic.stdAddChar_mul_nat_eq_additivePhase
+#print axioms TwinPrime.Analytic.sum_norm_nonzero_residue_kernels_le
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_inv_Ico_le_harmonic
+#print axioms TwinPrime.Analytic.primitive_character_ne_one
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_Ico_le_harmonic
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_Ico_le
+#print axioms TwinPrime.Analytic.discrete_abel_Ioc_complex
+#print axioms TwinPrime.Analytic.norm_sum_Ioc_real_mul_le_of_partial_sums
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_Ioc_le
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_log_Ioc_le
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_log_Ioc_le_uniform
+#print axioms TwinPrime.Analytic.norm_sum_typeI_log_character_le_uniform
+#print axioms TwinPrime.Analytic.norm_sum_typeI_log_character_le
+#print axioms TwinPrime.Analytic.sum_primitive_character_inv_eq
+#print axioms TwinPrime.Analytic.primitive_character_second_moment_inv_eq
+#print axioms TwinPrime.Analytic.primitive_character_large_sieve_log_direct
+#print axioms TwinPrime.Analytic.weighted_sum_mul_le_sqrt_mul_sqrt
+#print axioms TwinPrime.Analytic.character_rectangular_sum_eq
+#print axioms TwinPrime.Analytic.primitive_character_rectangular_bilinear_le
+#print axioms TwinPrime.Analytic.primitive_character_rectangular_bilinear_inv_le
+#print axioms TwinPrime.Analytic.norm_dyadicBlock_sq_le_energy
+#print axioms TwinPrime.Analytic.norm_prefix_sq_le_dyadicEnergy
+#print axioms TwinPrime.Analytic.sum_weighted_dyadicEnergy_le
+#print axioms TwinPrime.Analytic.sum_weighted_prefix_sq_le
+#print axioms TwinPrime.Analytic.dyadicIntervalCover_subset_tree
+#print axioms TwinPrime.Analytic.mem_dyadicIntervalCover_bounds
+#print axioms TwinPrime.Analytic.dyadicIntervalCover_disjoint_of_intervals
+#print axioms TwinPrime.Analytic.card_dyadicIntervalCover_le
+#print axioms TwinPrime.Analytic.sum_dyadicIntervalCover
+#print axioms TwinPrime.Analytic.norm_interval_sq_le_dyadicCover
+#print axioms TwinPrime.Analytic.sum_disjoint_intervals_sq_le_tree
+#print axioms TwinPrime.Analytic.sum_dyadicTreeBlocks_eq_energy
+#print axioms TwinPrime.Analytic.sum_disjoint_intervals_sq_le_dyadicEnergy
+#print axioms TwinPrime.Analytic.sum_weighted_disjoint_intervals_sq_le
+#print axioms TwinPrime.Analytic.primitiveCharacterFamily_interval_bound
+#print axioms TwinPrime.Analytic.primitive_character_dyadic_energy_le
+#print axioms TwinPrime.Analytic.primitive_character_large_sieve_selected_endpoints
+#print axioms TwinPrime.Analytic.primitive_character_maximal_large_sieve
+#print axioms TwinPrime.Analytic.primitive_character_disjoint_intervals_large_sieve
+#print axioms TwinPrime.Analytic.sum_dyadic_staircase_eq
+#print axioms TwinPrime.Analytic.dyadicStaircaseDetail_const
+#print axioms TwinPrime.Analytic.productCutoffBoundary_antitone
+#print axioms TwinPrime.Analytic.lt_productCutoffBoundary_iff
+#print axioms TwinPrime.Analytic.filter_Ico_productCutoff_eq
+#print axioms TwinPrime.Analytic.sum_dyadic_productCutoff_eq
+#print axioms TwinPrime.Analytic.sum_weighted_fixed_disjoint_intervals_sq_le
+#print axioms TwinPrime.Analytic.weighted_sum_sum_mul_le_sqrt_mul_sqrt
+#print axioms TwinPrime.Analytic.weighted_sum_sum_norm_mul_le
+#print axioms TwinPrime.Analytic.weighted_sum_norm_mul_le
+#print axioms TwinPrime.Analytic.weighted_sum_norm_sum_mul_le
+#print axioms TwinPrime.Analytic.weighted_sum_sum_norm_rectangular_le
+#print axioms TwinPrime.Analytic.sqrt_baseline_add_levels_le
+#print axioms TwinPrime.Analytic.dyadicTreeBlocks_same_height_separated
+#print axioms TwinPrime.Analytic.dyadicTreeBlocks_same_height_disjoint
+#print axioms TwinPrime.Analytic.dyadicStaircaseLevel_left_valid
+#print axioms TwinPrime.Analytic.dyadicStaircaseLevel_left_disjoint
+#print axioms TwinPrime.Analytic.dyadicStaircaseLevel_correction_valid
+#print axioms TwinPrime.Analytic.dyadicStaircaseLevel_correction_disjoint
+#print axioms TwinPrime.Analytic.dyadicStaircaseDetail_eq_sum_tree
+#print axioms TwinPrime.Analytic.dyadicStaircaseDetail_eq_sum_levels
+#print axioms TwinPrime.Analytic.norm_sum_dyadic_staircase_le_levels
+#print axioms TwinPrime.Analytic.sum_weighted_dyadic_staircase_le
+#print axioms TwinPrime.Analytic.characterProductCutoffSum_eq_staircase
+#print axioms TwinPrime.Analytic.characterProductCutoffSum_eq_baseline_add_detail
+#print axioms TwinPrime.Analytic.primitive_character_bilinear_selected_endpoints
+#print axioms TwinPrime.Analytic.primitive_character_maximal_bilinear
+#print axioms TwinPrime.Analytic.primitive_character_maximal_bilinear_inv
+#print axioms TwinPrime.Analytic.bilinear_box_polynomial_le
+#print axioms TwinPrime.Analytic.bilinear_box_polynomial_le_log_factor
+#print axioms TwinPrime.Analytic.lt_two_pow_dyadicNatDepth
+#print axioms TwinPrime.Analytic.dyadicNatCell_disjoint
+#print axioms TwinPrime.Analytic.biUnion_dyadicNatCell
+#print axioms TwinPrime.Analytic.existsUnique_dyadicNatCell
+#print axioms TwinPrime.Analytic.sum_Ioc_eq_dyadic_masked
+#print axioms TwinPrime.Analytic.sum_Ioc_product_eq_dyadic_of_support
+#print axioms TwinPrime.Analytic.norm_vaughanBoxA_le_one
+#print axioms TwinPrime.Analytic.norm_vaughanBoxB_le_log
+#print axioms TwinPrime.Analytic.sum_norm_vaughanBoxA_sq_Ico_le
+#print axioms TwinPrime.Analytic.sum_norm_vaughanBoxB_sq_Ico_le
+#print axioms TwinPrime.Analytic.characterVaughanII_eq_pair_sum
+#print axioms TwinPrime.Analytic.characterVaughanII_eq_masked_double_sum
+#print axioms TwinPrime.Analytic.sum_mangoldtLow_character_eq
+#print axioms TwinPrime.Analytic.characterPsi_eq_vaughan
+#print axioms TwinPrime.Analytic.primitive_character_vaughan_box_maximal_le
+#print axioms TwinPrime.Analytic.primitive_character_vaughan_box_polynomial_le
+#print axioms TwinPrime.Analytic.card_activeVaughanBoxes_le
+#print axioms TwinPrime.Analytic.vaughanBox_characterProductCutoffSum_eq_zero_of_not_mem
+#print axioms TwinPrime.Analytic.vaughanBox_characterProductCutoffMax_eq_zero_of_not_mem
+#print axioms TwinPrime.Analytic.activeVaughanBoxes_bounds
+#print axioms TwinPrime.Analytic.activeVaughanBoxes_depth_product_le
+#print axioms TwinPrime.Analytic.characterVaughanII_eq_dyadic_boxes
+#print axioms TwinPrime.Analytic.characterVaughanII_eq_active_boxes
+#print axioms TwinPrime.Analytic.norm_characterVaughanII_le_active_max
+#print axioms TwinPrime.Analytic.characterVaughanIIMax_le_active_max
+#print axioms TwinPrime.Analytic.primitive_character_vaughanII_maximal_le
+#print axioms TwinPrime.Analytic.primitive_character_vaughanII_maximal_inv_le
+#print axioms TwinPrime.Analytic.norm_characterPsi_le_uniform
+#print axioms TwinPrime.Analytic.norm_characterPsi_min_le
+#print axioms TwinPrime.Analytic.characterPsiMax_le
+#print axioms TwinPrime.Analytic.primitive_characterMaxError_eq_characterPsiMax
+#print axioms TwinPrime.Analytic.sum_character_convolution_eq_factor_sum
+#print axioms TwinPrime.Analytic.characterVaughanI1_eq_factor_sum
+#print axioms TwinPrime.Analytic.characterVaughanI2_eq_factor_sum
+#print axioms TwinPrime.Analytic.characterPsi_eq_vaughan_types
+#print axioms TwinPrime.Analytic.card_dirichletCharacter_eq_totient
+#print axioms TwinPrime.Analytic.card_primitiveCharacters_le_totient
+#print axioms TwinPrime.Analytic.weighted_sum_primitive_le
+#print axioms TwinPrime.Analytic.sum_weighted_primitive_le_const
+#print axioms TwinPrime.Analytic.sum_modulus_sqrt_log_le
+#print axioms TwinPrime.Analytic.norm_characterVaughanI1_le
+#print axioms TwinPrime.Analytic.norm_characterVaughanI2_le
+#print axioms TwinPrime.Analytic.characterVaughanI1Max_le
+#print axioms TwinPrime.Analytic.characterVaughanI2Max_le
+#print axioms TwinPrime.Analytic.characterPsiMax_le_vaughan
+#print axioms TwinPrime.Analytic.primitive_character_vaughanI1_maximal_mean_le
+#print axioms TwinPrime.Analytic.primitive_character_vaughanI2_maximal_mean_le
+#print axioms TwinPrime.Analytic.primitive_character_low_mean_le
+#print axioms TwinPrime.Analytic.primitive_characterPsiMax_mean_le
+#print axioms TwinPrime.Analytic.bvInternalCutoff_bounds
+#print axioms TwinPrime.Analytic.bvInternalCutoff_sq_le_rpow_quarter
+#print axioms TwinPrime.Analytic.bvInternalCutoff_half_reciprocal_sqrt_le
+#print axioms TwinPrime.Analytic.bvInternalCutoff_sq_mul_sqrt_modulus_le
+#print axioms TwinPrime.Analytic.one_le_log_of_256_le
+#print axioms TwinPrime.Analytic.dyadicNatDepth_le_two_div_log_two_mul_log
+#print axioms TwinPrime.Analytic.characterLargeSieveLogFactor_le_two_log
+#print axioms TwinPrime.Analytic.one_add_log_modulus_le_log
+#print axioms TwinPrime.Analytic.bvTypeIBudget_le
+#print axioms TwinPrime.Analytic.bvInternalCutoff_polynomial_le_four
+#print axioms TwinPrime.Analytic.bvTypeIIBudget_le
+#print axioms TwinPrime.Analytic.bvInternalCutoff_mean_budget_le
+#print axioms TwinPrime.Analytic.primitiveCharacterMass_eq_sum_characterPsiMax
+#print axioms TwinPrime.Analytic.coefficientSum_primitiveCharacterPsiWeight
+#print axioms TwinPrime.Analytic.primitiveCharacterPsiWeight_div_eq
+#print axioms TwinPrime.Analytic.sum_primitiveCharacterMass_div_totient_le_of_quadratic_mean
+#print axioms TwinPrime.Analytic.primitiveCharacterMass_div_totient_le
+#print axioms TwinPrime.Analytic.sum_small_primitiveCharacterMass_le
+#print axioms TwinPrime.Analytic.primitive_character_mean_value
+#print axioms TwinPrime.Analytic.primitive_character_mean_value_inv
+#print axioms TwinPrime.Analytic.sum_large_primitiveCharacterMass_le
+#print axioms TwinPrime.Analytic.sum_progressionMaxError_le_small_conductors_and_tail_if
+#print axioms TwinPrime.Analytic.sum_progressionMaxError_le_small_conductor_budget
+#print axioms TwinPrime.Analytic.bvSmallConductorCutoff_bounds
+#print axioms TwinPrime.Analytic.bvSmallConductorCutoff_le_log_endpoint
+#print axioms TwinPrime.Analytic.bv_admissible_modulus_bounds
+#print axioms TwinPrime.Analytic.bv_admissible_modulus_le_exception_range
+#print axioms TwinPrime.Analytic.bv_small_conductor_budget_le
+#print axioms TwinPrime.Analytic.bvLargeConductorBudget_le_log_saving
+#print axioms TwinPrime.Analytic.eventually_bvLargeConductorBudget_le_log_saving
+#print axioms TwinPrime.Analytic.norm_centeredCharacterPsi_le_trivial
+#print axioms TwinPrime.Analytic.PointwiseSiegelWalfisz.maximal
+#print axioms TwinPrime.Analytic.MaximalSiegelWalfisz.bombieriVinogradov
+#print axioms TwinPrime.Analytic.PointwiseSiegelWalfisz.bombieriVinogradov
+#print axioms TwinPrime.Analytic.norm_cpow_neg_sub_le
+#print axioms TwinPrime.Analytic.norm_sum_Ioc_cpow_mul_le_of_partial_sums
+#print axioms TwinPrime.Analytic.norm_sum_primitive_character_dirichlet_Ioc_le
+#print axioms TwinPrime.Analytic.characterDirichletPartialSum_sub
+#print axioms TwinPrime.Analytic.cauchySeq_characterDirichletPartialSum
+#print axioms TwinPrime.Analytic.exists_characterDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.tendsto_characterDirichletPartialSum_LFunction
+#print axioms TwinPrime.Analytic.norm_LFunction_sub_characterDirichletPartialSum_le
+#print axioms TwinPrime.twinPrimeConjecture_of_siegel_walfisz_and_bilinear
+
+#print axioms TwinPrime.Analytic.tendsto_characterDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.norm_characterDirichletLimit_sub_partialSum_le
+#print axioms TwinPrime.Analytic.norm_characterDirichletLimit_sub_partialSum_le_uniform
+#print axioms TwinPrime.Analytic.tendstoUniformlyOn_characterDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_characterDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.differentiable_characterDirichletPartialSum
+#print axioms TwinPrime.Analytic.differentiableOn_characterDirichletLimit
+#print axioms TwinPrime.Analytic.characterDirichletLimit_eqOn_LFunction
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_characterDirichletPartialSum_LFunction
+#print axioms TwinPrime.Analytic.tendsto_characterDirichletPartialSum_LFunction_of_re_pos
+#print axioms TwinPrime.Analytic.norm_LFunction_sub_characterDirichletPartialSum_le_of_re_pos
+#print axioms TwinPrime.Analytic.characterDirichletPartialSum_one
+#print axioms TwinPrime.Analytic.sum_Ioc_one_inv_sq_le_three_quarters
+#print axioms TwinPrime.Analytic.norm_characterDirichletPartialSum_sub_one_le
+#print axioms TwinPrime.Analytic.norm_LFunction_sub_one_le
+#print axioms TwinPrime.Analytic.one_quarter_le_norm_LFunction
+#print axioms TwinPrime.Analytic.norm_inv_LFunction_le_four
+#print axioms TwinPrime.Analytic.norm_LFunction_le_of_re_pos
+#print axioms TwinPrime.Analytic.norm_LFunction_le_on_re_norm
+#print axioms TwinPrime.Analytic.norm_LFunction_le_on_closedBall
+#print axioms TwinPrime.Analytic.norm_iteratedDeriv_LFunction_le
+#print axioms TwinPrime.Analytic.norm_deriv_LFunction_le
+#print axioms TwinPrime.Analytic.primitive_character_interval_constant_le_sq
+#print axioms TwinPrime.Analytic.primitiveLFunctionGrowthBudget_half_le
+#print axioms TwinPrime.Analytic.sum_divisor_LFunction_le_log_conductor_height
+#print axioms TwinPrime.Analytic.mangoldtDirichletMass_nonneg
+#print axioms TwinPrime.Analytic.vonMangoldt_term_real
+#print axioms TwinPrime.Analytic.LSeries_vonMangoldt_real_eq
+#print axioms TwinPrime.Analytic.summable_mangoldtDirichletMass
+#print axioms TwinPrime.Analytic.neg_zeta_logDerivative_eq_mass
+#print axioms TwinPrime.Analytic.neg_zeta_logDerivative_re_nonneg
+#print axioms TwinPrime.Analytic.neg_zeta_logDerivative_im_eq_zero
+#print axioms TwinPrime.Analytic.neg_LFunction_logDerivative_eq_twist
+#print axioms TwinPrime.Analytic.norm_twist_vonMangoldt_term_le
+#print axioms TwinPrime.Analytic.norm_twist_vonMangoldt_LSeries_le
+#print axioms TwinPrime.Analytic.norm_LFunction_logDerivative_le_zeta
+#print axioms TwinPrime.Analytic.three_four_one_re_nonneg
+#print axioms TwinPrime.Analytic.twist_vonMangoldt_term_eq_phase
+#print axioms TwinPrime.Analytic.character_cpow_phase_norm_le_one
+#print axioms TwinPrime.Analytic.character_cpow_phase_sq
+#print axioms TwinPrime.Analytic.three_four_one_vonMangoldt_term_nonneg
+#print axioms TwinPrime.Analytic.three_four_one_vonMangoldt_LSeries_nonneg
+#print axioms TwinPrime.Analytic.three_four_one_LFunction_logDerivative_nonneg
+#print axioms TwinPrime.Analytic.norm_cpow_neg_sub_integral_unit_le
+#print axioms TwinPrime.Analytic.norm_sum_cpow_neg_sub_integral_Ioc_le
+#print axioms TwinPrime.Analytic.integral_cpow_neg_eq_pole_difference
+#print axioms TwinPrime.Analytic.zetaPolePartialSum_sub
+#print axioms TwinPrime.Analytic.norm_zetaPolePartialSum_sub_le
+#print axioms TwinPrime.Analytic.norm_zetaPolePartialSum_sub_le_left
+#print axioms TwinPrime.Analytic.cauchySeq_zetaPolePartialSum
+#print axioms TwinPrime.Analytic.exists_zetaPolePartialSum_limit
+#print axioms TwinPrime.Analytic.tendsto_zetaPartialSum
+#print axioms TwinPrime.Analytic.tendsto_zetaPoleCorrection_zero
+#print axioms TwinPrime.Analytic.tendsto_zetaPolePartialSum_riemannZeta
+#print axioms TwinPrime.Analytic.norm_riemannZeta_sub_sum_sub_pole_le
+#print axioms TwinPrime.Analytic.regularizedZetaPartialSum_one
+#print axioms TwinPrime.Analytic.regularizedZetaPartialSum_eq_mul
+#print axioms TwinPrime.Analytic.norm_regularizedZetaPartialSum_sub_le
+#print axioms TwinPrime.Analytic.cauchySeq_regularizedZetaPartialSum
+#print axioms TwinPrime.Analytic.tendsto_regularizedZetaPartialSum_limit
+#print axioms TwinPrime.Analytic.norm_regularizedZetaLimit_sub_partialSum_le
+#print axioms TwinPrime.Analytic.norm_regularizedZetaLimit_sub_partialSum_le_uniform
+#print axioms TwinPrime.Analytic.tendstoUniformlyOn_regularizedZetaPartialSum_limit
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_regularizedZetaPartialSum_limit
+#print axioms TwinPrime.Analytic.differentiable_regularizedZetaPartialSum
+#print axioms TwinPrime.Analytic.differentiableOn_regularizedZetaLimit
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_one
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_apply_of_ne_one
+#print axioms TwinPrime.Analytic.differentiable_regularizedRiemannZeta
+#print axioms TwinPrime.Analytic.regularizedZetaLimit_eqOn_regularizedRiemannZeta
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_regularizedZetaPartialSum_regularizedRiemannZeta
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_sub_partialSum_le
+#print axioms TwinPrime.Analytic.tendsto_zetaPolePartialSum_riemannZeta_of_re_pos
+#print axioms TwinPrime.Analytic.norm_riemannZeta_sub_sum_sub_pole_le_of_re_pos
+
+#print axioms TwinPrime.Analytic.exists_normalized_holomorphic_log_on_ball
+#print axioms TwinPrime.Analytic.norm_analytic_le_of_re_le_on_ball
+#print axioms TwinPrime.Analytic.norm_deriv_le_of_re_le_on_ball
+#print axioms TwinPrime.Analytic.norm_logDerivative_le_of_nonvanishing_on_ball
+#print axioms TwinPrime.Analytic.zero_removal_log_budget_le
+#print axioms TwinPrime.Analytic.zero_removal_log_budget_le_of_jensen
+#print axioms TwinPrime.Analytic.exists_holomorphic_zero_removal
+#print axioms TwinPrime.Analytic.zeroFactorMultiplicity_eq_sum
+#print axioms TwinPrime.Analytic.zeroFactorMultiplicity_cast
+#print axioms TwinPrime.Analytic.zeroFactorPolynomial_eq_prod
+#print axioms TwinPrime.Analytic.norm_zeroFactorPolynomial_le
+#print axioms TwinPrime.Analytic.le_norm_zeroFactorPolynomial
+#print axioms TwinPrime.Analytic.norm_zeroFactorPolynomial_center_le
+#print axioms TwinPrime.Analytic.norm_zeroFactorPolynomial_sphere_ge
+#print axioms TwinPrime.Analytic.zero_removal_center_lower
+#print axioms TwinPrime.Analytic.norm_zero_removal_quotient_le_on_closedBall
+#print axioms TwinPrime.Analytic.logDeriv_sub_const_zpow
+#print axioms TwinPrime.Analytic.logDeriv_factorizedRational
+#print axioms TwinPrime.Analytic.logDeriv_zeroFactorPolynomial
+#print axioms TwinPrime.Analytic.analyticAt_zeroFactorPolynomial_of_ne_zero
+#print axioms TwinPrime.Analytic.logDeriv_eq_zeroFactor_sum_add
+#print axioms TwinPrime.Analytic.exists_holomorphic_zero_removal_logDeriv
+#print axioms TwinPrime.Analytic.norm_logDeriv_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.norm_logDeriv_LFunction_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.norm_logDeriv_LFunction_sub_zero_sum_le_of_one_le_re
+#print axioms TwinPrime.Analytic.characterEulerCorrection_one
+#print axioms TwinPrime.Analytic.norm_characterEulerRatio_le_half
+#print axioms TwinPrime.Analytic.characterEulerFactor_ne_zero
+#print axioms TwinPrime.Analytic.hasDerivAt_characterEulerFactor
+#print axioms TwinPrime.Analytic.norm_characterEulerTerm_le_log
+#print axioms TwinPrime.Analytic.sum_log_primeFactors_le_log
+#print axioms TwinPrime.Analytic.norm_characterEulerCorrection_le_log
+#print axioms TwinPrime.Analytic.logDerivative_LFunction_changeLevel
+#print axioms TwinPrime.Analytic.norm_logDerivative_LFunction_changeLevel_sub_le
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_changeLevel
+#print axioms TwinPrime.Analytic.logDerivative_LFunction_eq_primitiveCharacter
+#print axioms TwinPrime.Analytic.norm_logDerivative_LFunction_sub_primitiveCharacter_le
+#print axioms TwinPrime.Analytic.deriv_regularizedRiemannZeta_of_ne_one
+#print axioms TwinPrime.Analytic.neg_zeta_logDerivative_eq_pole_sub_regularized
+#print axioms TwinPrime.Analytic.regularizedZetaPartialSum_cutoff_one
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_sub_self_le
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_le_of_re_pos
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_le_on_re_norm
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_le_on_closedBall
+#print axioms TwinPrime.Analytic.norm_iteratedDeriv_regularizedRiemannZeta_le
+#print axioms TwinPrime.Analytic.norm_deriv_regularizedRiemannZeta_le
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_sub_one_le_two_thirds
+#print axioms TwinPrime.Analytic.one_third_le_norm_regularizedRiemannZeta
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_of_norm_sub_one_le
+#print axioms TwinPrime.Analytic.norm_regularizedRiemannZeta_logDerivative_le_forty
+#print axioms TwinPrime.Analytic.norm_neg_zeta_logDerivative_sub_pole_le_forty
+#print axioms TwinPrime.Analytic.primitiveLFunction_zero_re_lt_one
+#print axioms TwinPrime.Analytic.LFunction_divisor_re_lt_one
+#print axioms TwinPrime.Analytic.meromorphicOrderAt_primitiveLFunction_ne_top
+#print axioms TwinPrime.Analytic.one_le_LFunction_divisor_of_zero
+#print axioms TwinPrime.Analytic.LFunction_divisor_term_re_nonneg
+#print axioms TwinPrime.Analytic.localLFunctionZeroTerm_hasFiniteSupport
+#print axioms TwinPrime.Analytic.localLFunctionZeroSum_re
+#print axioms TwinPrime.Analytic.localLFunctionZeroSum_re_nonneg
+#print axioms TwinPrime.Analytic.LFunction_divisor_term_re_le_zeroSum
+#print axioms TwinPrime.Analytic.one_div_sub_le_localLFunctionZeroSum_re_of_zero
+#print axioms TwinPrime.Analytic.primitiveLFunctionLogBudget_nonneg
+#print axioms TwinPrime.Analytic.primitiveLFunctionLogBudget_mono_conductor
+#print axioms TwinPrime.Analytic.sigma_add_I_mul_mem_local_disk
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_re_le_budget_sub_zeroSum
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_re_le_budget
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_re_le_budget_sub_one_div_of_zero
+#print axioms TwinPrime.Analytic.four_three_pole_contradiction
+#print axioms TwinPrime.Analytic.zero_free_parameters_le
+
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_re_le_budget_add_log
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_principal_eq_zeta_sub_correction
+#print axioms TwinPrime.Analytic.neg_logDerivative_LFunction_principal_re_le_zeta_add_log
+#print axioms TwinPrime.Analytic.zetaLogBudget_nonneg
+#print axioms TwinPrime.Analytic.zetaLogBudget_le_log_abs
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_of_one_le_re
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_zero_re_lt_one
+#print axioms TwinPrime.Analytic.one_quarter_le_norm_regularizedRiemannZeta_center
+#print axioms TwinPrime.Analytic.regularizedZetaGrowthBudget_half_le
+#print axioms TwinPrime.Analytic.norm_logDeriv_regularizedZeta_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.regularizedZeta_divisor_re_lt_one
+#print axioms TwinPrime.Analytic.regularizedZeta_divisor_term_re_nonneg
+#print axioms TwinPrime.Analytic.localZetaZeroTerm_hasFiniteSupport
+#print axioms TwinPrime.Analytic.localZetaZeroSum_re_nonneg
+#print axioms TwinPrime.Analytic.neg_logDerivative_regularizedZeta_re_le_budget_sub_zeroSum
+#print axioms TwinPrime.Analytic.neg_logDerivative_regularizedZeta_re_le_budget
+#print axioms TwinPrime.Analytic.neg_logDerivative_zeta_re_le_pole_add_budget
+#print axioms TwinPrime.Analytic.characterDirichletPartialSum_inv_conj
+#print axioms TwinPrime.Analytic.LFunction_inv_conj_of_one_lt_re
+#print axioms TwinPrime.Analytic.LFunction_inv_conj
+#print axioms TwinPrime.Analytic.character_inv_eq_self_of_sq_eq_one
+#print axioms TwinPrime.Analytic.LFunction_conj_of_sq_eq_one
+#print axioms TwinPrime.Analytic.deriv_LFunction_conj_of_sq_eq_one
+#print axioms TwinPrime.Analytic.LFunction_conj_zero_of_sq_eq_one
+#print axioms TwinPrime.Analytic.two_LFunction_divisor_terms_re_le_zeroSum
+#print axioms TwinPrime.Analytic.zero_reciprocal_re_le_LFunction_divisor_term
+#print axioms TwinPrime.Analytic.two_zero_reciprocals_re_le_localLFunctionZeroSum
+#print axioms TwinPrime.Analytic.re_one_div_real_sub_complex
+#print axioms TwinPrime.Analytic.conjugate_pair_le_localLFunctionZeroSum_re
+#print axioms TwinPrime.Analytic.neg_zeta_logDerivative_real_le_pole_add_forty
+#print axioms TwinPrime.Analytic.nonquadraticZeroFreeBudget_ge
+#print axioms TwinPrime.Analytic.four_div_sub_le_of_nonquadratic_zero
+#print axioms TwinPrime.Analytic.LFunction_ne_zero_of_nonquadratic
+#print axioms TwinPrime.Analytic.principal_pole_re_at_twice_height
+#print axioms TwinPrime.Analytic.principal_pole_re_le_one_fifth
+#print axioms TwinPrime.Analytic.four_three_one_fifth_pole_contradiction
+#print axioms TwinPrime.Analytic.quadraticZeroFreeBudget_ge
+#print axioms TwinPrime.Analytic.four_div_sub_le_of_quadratic_zero
+#print axioms TwinPrime.Analytic.LFunction_ne_zero_of_quadratic_large_height_of_budget
+#print axioms TwinPrime.Analytic.LFunction_ne_zero_of_quadratic_large_height
+#print axioms TwinPrime.Analytic.nearOneZeroBudget_ge
+#print axioms TwinPrime.Analytic.nearOneZeroBudget_pos
+#print axioms TwinPrime.Analytic.nearOneEvaluationShift_pos
+#print axioms TwinPrime.Analytic.nearOneEvaluationShift_le_one_eighth
+#print axioms TwinPrime.Analytic.nearOneZeroWidth_eq_shift_div_four
+#print axioms TwinPrime.Analytic.nearOneZeroWidth_pos
+#print axioms TwinPrime.Analytic.nearOneZeroWidth_le_one_eighth
+#print axioms TwinPrime.Analytic.nearOne_reciprocal_kernel_lower
+#print axioms TwinPrime.Analytic.localLFunctionZeroSum_real_le_pole_add_budget
+#print axioms TwinPrime.Analytic.localLFunctionZeroSum_nearOne_le_five_budget
+#print axioms TwinPrime.Analytic.nearOne_zero_mem_local_disk
+#print axioms TwinPrime.Analytic.nearOne_zero_reciprocal_re_ge_three_budget
+#print axioms TwinPrime.Analytic.nearOne_zero_unique
+#print axioms TwinPrime.Analytic.nearOne_zero_divisor_eq_one
+#print axioms TwinPrime.Analytic.nearOne_zero_order_eq_one
+#print axioms TwinPrime.Analytic.nearOne_zero_real_of_sq_eq_one
+#print axioms TwinPrime.Analytic.primitiveZeroFreeBudget_bounds
+#print axioms TwinPrime.Analytic.primitiveZeroFreeWidth_pos
+#print axioms TwinPrime.Analytic.primitiveZeroFreeWidth_le_nonquadratic
+#print axioms TwinPrime.Analytic.primitiveZeroFreeWidth_le_nearOne
+#print axioms TwinPrime.Analytic.primitiveZeroFreeHeight_le_nearOne
+#print axioms TwinPrime.Analytic.LFunction_zero_in_region_near_one
+#print axioms TwinPrime.Analytic.LFunction_zero_in_region_real_simple
+#print axioms TwinPrime.Analytic.LFunction_zero_in_region_unique
+#print axioms TwinPrime.Analytic.meromorphicOrderAt_regularizedZeta_ne_top
+#print axioms TwinPrime.Analytic.one_le_regularizedZeta_divisor_of_zero
+#print axioms TwinPrime.Analytic.localZetaZeroSum_re
+#print axioms TwinPrime.Analytic.regularizedZeta_divisor_term_re_le_zeroSum
+#print axioms TwinPrime.Analytic.one_div_sub_le_localZetaZeroSum_re_of_zero
+#print axioms TwinPrime.Analytic.neg_logDerivative_zeta_re_le_pole_add_budget_sub_one_div_of_zero
+#print axioms TwinPrime.Analytic.principal_pole_re_at_height
+#print axioms TwinPrime.Analytic.principal_pole_re_le_one_seventeenth
+#print axioms TwinPrime.Analytic.four_three_five_seventeenths_pole_contradiction
+#print axioms TwinPrime.Analytic.zetaZeroFreeBudget_ge
+#print axioms TwinPrime.Analytic.four_div_sub_le_of_regularizedZeta_zero
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_of_re_ge_one_sub_budget
+#print axioms TwinPrime.Analytic.riemannZeta_ne_zero_of_re_ge_one_sub_budget
+#print axioms TwinPrime.Analytic.zeroFreeLogConstant_ge
+#print axioms TwinPrime.Analytic.zeroFreeLogConstant_pos
+#print axioms TwinPrime.Analytic.primitiveLFunctionLogBudget_le_log_abs
+#print axioms TwinPrime.Analytic.log_abs_double_add_four_le
+#print axioms TwinPrime.Analytic.primitiveZeroFreeBudget_le_log_conductor_height
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_pos
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_le
+#print axioms TwinPrime.Analytic.LFunction_zero_in_log_region_real_simple
+#print axioms TwinPrime.Analytic.LFunction_zero_in_log_region_unique
+#print axioms TwinPrime.Analytic.zetaZeroFreeBudget_le_log_height
+#print axioms TwinPrime.Analytic.zetaLogZeroFreeWidth_pos
+#print axioms TwinPrime.Analytic.zetaLogZeroFreeWidth_le
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_of_log_region
+#print axioms TwinPrime.Analytic.riemannZeta_ne_zero_of_log_region
+
+-- The type audit is separate: standard axioms do not discharge theorem hypotheses.
+#check TwinPrime.twinPrimeConjecture_of_bilinear_estimates
+#check TwinPrime.twinPrimeConjecture_of_primary_estimates
+#check TwinPrime.Analytic.MaximalBombieriVinogradov
+#check TwinPrime.Analytic.tendsto_typeICorrection_div_of_inputs
+#check TwinPrime.twinPrimeConjecture_of_classical_inputs_and_bilinear
+#check TwinPrime.Analytic.tendsto_bilinearTerm_sub_primeSupport_div
+#check TwinPrime.Analytic.tendsto_normalizedMoebiusSum_log_sq_of_mertens
+#check TwinPrime.twinPrimeConjecture_of_rough_distribution_and_parity
+#print TwinPrime.Analytic.MertensLogSix
+#check TwinPrime.twinPrimeConjecture_of_bv_mertens_and_bilinear
+#check TwinPrime.Analytic.bilinearBox_sq_le_dispersion
+#check TwinPrime.Analytic.tendsto_primary_dispersion_diagonal_sqrt
+#check TwinPrime.Analytic.MaximalBombieriVinogradov.psi_error
+#check TwinPrime.Analytic.moebius_mul_centeredSelbergCoefficient_apply
+#check TwinPrime.Analytic.MaximalBombieriVinogradov.real_primeReciprocal_center
+#check TwinPrime.Analytic.centeredSelbergReciprocalMass_le_log_sq
+#check TwinPrime.Analytic.moebiusSelberg_hyperbola
+#check TwinPrime.Analytic.exists_abs_bound_of_eventually_initialIntervalSup_contraction
+#check TwinPrime.Analytic.MaximalBombieriVinogradov.mertensLogSix
+#check TwinPrime.twinPrimeConjecture_of_bv_and_bilinear
+#check TwinPrime.Analytic.eventually_sum_progressionMaxError_le_primitiveCharacter_sum
+#check TwinPrime.Analytic.norm_primitive_gaussSum_sq
+#check TwinPrime.Analytic.primitive_character_largeSieve_transfer
+#check TwinPrime.Analytic.eventually_sum_progressionMaxError_le_weighted_conductor_sum
+#check TwinPrime.Analytic.sum_reciprocalTotient_multiples_le_log
+#check TwinPrime.Analytic.sum_Ioc_div_le_of_cumulative_quadratic
+#check TwinPrime.Analytic.finite_large_sieve_finset
+#check TwinPrime.Analytic.unit_rational_frequency_dist_ge_inv_sq
+#check TwinPrime.Analytic.additive_large_sieve_of_separated
+#check TwinPrime.Analytic.primitive_character_large_sieve_log
+#check TwinPrime.Analytic.norm_sum_primitive_character_Ico_le
+#check TwinPrime.Analytic.norm_sum_typeI_log_character_le
+#check TwinPrime.Analytic.primitive_character_rectangular_bilinear_le
+#check TwinPrime.Analytic.primitive_character_maximal_large_sieve
+#check TwinPrime.Analytic.primitive_character_disjoint_intervals_large_sieve
+#check TwinPrime.Analytic.sum_dyadic_productCutoff_eq
+#check TwinPrime.Analytic.sum_weighted_dyadic_staircase_le
+#check TwinPrime.Analytic.primitive_character_bilinear_selected_endpoints
+#check TwinPrime.Analytic.primitive_character_maximal_bilinear
+#check TwinPrime.Analytic.bilinear_box_polynomial_le_log_factor
+#check TwinPrime.Analytic.characterPsi_eq_vaughan
+#check TwinPrime.Analytic.primitive_character_vaughan_box_polynomial_le
+#check TwinPrime.Analytic.characterVaughanII_eq_active_boxes
+#check TwinPrime.Analytic.primitive_character_vaughanII_maximal_le
+#check TwinPrime.Analytic.primitive_characterPsiMax_mean_le
+#check TwinPrime.Analytic.primitive_character_mean_value
+#check TwinPrime.Analytic.sum_large_primitiveCharacterMass_le
+#check TwinPrime.Analytic.sum_progressionMaxError_le_small_conductor_budget
+#print TwinPrime.Analytic.PointwiseSiegelWalfisz
+#print TwinPrime.Analytic.MaximalSiegelWalfisz
+#check TwinPrime.Analytic.PointwiseSiegelWalfisz.maximal
+#check TwinPrime.Analytic.eventually_bvLargeConductorBudget_le_log_saving
+#check TwinPrime.Analytic.MaximalSiegelWalfisz.bombieriVinogradov
+#check TwinPrime.Analytic.PointwiseSiegelWalfisz.bombieriVinogradov
+#check TwinPrime.Analytic.exists_characterDirichletPartialSum_limit
+#check TwinPrime.Analytic.norm_LFunction_sub_characterDirichletPartialSum_le
+#check TwinPrime.Analytic.norm_LFunction_sub_characterDirichletPartialSum_le_of_re_pos
+#check TwinPrime.Analytic.tendstoLocallyUniformlyOn_characterDirichletPartialSum_LFunction
+#check TwinPrime.Analytic.one_quarter_le_norm_LFunction
+#check TwinPrime.Analytic.norm_iteratedDeriv_LFunction_le
+#check TwinPrime.Analytic.sum_divisor_LFunction_le_log_conductor_height
+#check TwinPrime.Analytic.norm_LFunction_logDerivative_le_zeta
+#check TwinPrime.Analytic.three_four_one_LFunction_logDerivative_nonneg
+#check TwinPrime.Analytic.norm_regularizedRiemannZeta_sub_partialSum_le
+#check TwinPrime.Analytic.norm_riemannZeta_sub_sum_sub_pole_le_of_re_pos
+#check TwinPrime.Analytic.norm_logDerivative_le_of_nonvanishing_on_ball
+#check TwinPrime.Analytic.exists_holomorphic_zero_removal
+#check TwinPrime.Analytic.norm_logDeriv_sub_zero_sum_le
+#check TwinPrime.Analytic.norm_logDeriv_LFunction_sub_zero_sum_le
+#check TwinPrime.Analytic.logDerivative_LFunction_eq_primitiveCharacter
+#check TwinPrime.Analytic.norm_neg_zeta_logDerivative_sub_pole_le_forty
+#check TwinPrime.Analytic.one_div_sub_le_localLFunctionZeroSum_re_of_zero
+#check TwinPrime.Analytic.neg_logDerivative_LFunction_re_le_budget_sub_one_div_of_zero
+#check TwinPrime.Analytic.four_three_pole_contradiction
+#check TwinPrime.Analytic.LFunction_ne_zero_of_nonquadratic
+#check TwinPrime.Analytic.LFunction_ne_zero_of_quadratic_large_height_of_budget
+#check TwinPrime.Analytic.nearOne_zero_order_eq_one
+#check TwinPrime.Analytic.LFunction_zero_in_region_real_simple
+#check TwinPrime.Analytic.LFunction_zero_in_region_unique
+#check TwinPrime.Analytic.primitiveZeroFreeBudget_le_log_conductor_height
+#print TwinPrime.Analytic.primitiveLogZeroFreeWidth
+#check TwinPrime.Analytic.LFunction_zero_in_log_region_real_simple
+#check TwinPrime.Analytic.LFunction_zero_in_log_region_unique
+#print TwinPrime.Analytic.zetaLogZeroFreeWidth
+#check TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_of_log_region
+#check TwinPrime.Analytic.riemannZeta_ne_zero_of_log_region
+
+-- Quantitative zero-to-value and positive four-factor product checkpoint.
+#print axioms TwinPrime.Analytic.norm_sub_le_real_segment_deriv_bound
+#print axioms TwinPrime.Analytic.norm_LFunction_one_le_gap_of_deriv_bound
+#print axioms TwinPrime.Analytic.norm_deriv_LFunction_real_le_growth_budget
+#print axioms TwinPrime.Analytic.norm_LFunction_one_le_gap_budget
+#print axioms TwinPrime.Analytic.rpow_neg_le_exp_two_div_of_near_one
+#print axioms TwinPrime.Analytic.norm_characterDirichletPartialSum_conductor_le_near_one
+#print axioms TwinPrime.Analytic.norm_LFunction_le_near_one
+#print axioms TwinPrime.Analytic.norm_LFunction_le_on_near_one_closedBall
+#print axioms TwinPrime.Analytic.norm_deriv_LFunction_near_one_le
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_le_one_div_log
+#print axioms TwinPrime.Analytic.norm_LFunction_one_le_log_sq_gap
+#print axioms TwinPrime.Analytic.real_zero_gap_ge_LFunction_one_div_log_sq
+#print axioms TwinPrime.Analytic.LFunction_zero_in_log_region_gap
+#print axioms TwinPrime.Analytic.exists_pos_le_norm_LFunction_one
+#print axioms TwinPrime.Analytic.exists_pos_le_norm_LFunction_one_of_conductor_le
+#print axioms TwinPrime.Analytic.primitiveLFunction_real_derivative_budget_le
+#print axioms TwinPrime.Analytic.exists_pos_le_primitive_real_zero_gap_of_conductor_le
+#print axioms TwinPrime.Analytic.log_natCast_sq_le_rpow_half
+#print axioms TwinPrime.Analytic.power_gap_constant_le_div_log_sq
+#print axioms TwinPrime.Analytic.real_zero_power_gap_of_value_lower_bound
+#print axioms TwinPrime.Analytic.LFunction_zero_in_log_region_power_gap_of_value_lower_bound
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_isMultiplicative
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_one
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_comm
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_eq_paired
+#print axioms TwinPrime.Analytic.character_pair_convolution_eq_twisted_zetaMul
+#print axioms TwinPrime.Analytic.zetaMul_prime_pow_eq_sum
+#print axioms TwinPrime.Analytic.arithmeticFunction_mul_prime_pow_nonneg
+#print axioms TwinPrime.Analytic.arithmeticFunction_le_mul_prime_pow
+#print axioms TwinPrime.Analytic.character_pair_prime_pow_nonneg_of_nonneg
+#print axioms TwinPrime.Analytic.character_pair_prime_pow_nonneg_of_neg_one
+#print axioms TwinPrime.Analytic.one_le_zetaMul_prime_even_pow
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_prime_pow_bounds
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_nonneg
+#print axioms TwinPrime.Analytic.one_le_quadraticProductCoefficients_square
+#print axioms TwinPrime.Analytic.LSeries_zeta_three_character_convolution
+#print axioms TwinPrime.Analytic.LSeriesSummable_quadraticProductCoefficients
+#print axioms TwinPrime.Analytic.LSeries_quadraticProductCoefficients
+#print axioms TwinPrime.Analytic.quadratic_character_mul_ne_one_of_ne
+#print axioms TwinPrime.Analytic.differentiable_regularizedQuadraticLFunctionProduct
+#print axioms TwinPrime.Analytic.differentiable_regularizedQuadraticLFunctionProduct_of_quadratic
+#print axioms TwinPrime.Analytic.regularizedQuadraticLFunctionProduct_one
+#print axioms TwinPrime.Analytic.regularizedQuadraticLFunctionProduct_eq
+#print axioms TwinPrime.Analytic.regularizedQuadraticLFunctionProduct_eq_mul_LSeries
+#print axioms TwinPrime.Analytic.regularizedQuadraticLFunctionProduct_one_ne_zero
+#print axioms TwinPrime.Analytic.tendsto_mul_quadraticLFunctionProduct_at_one
+#print axioms TwinPrime.Analytic.quadraticProductCoefficients_eq_ofReal_re
+#print axioms TwinPrime.Analytic.quadraticProductDirichletPartialSum_real
+#print axioms TwinPrime.Analytic.quadraticProductRealPartialSum_nonneg
+#print axioms TwinPrime.Analytic.one_le_quadraticProductRealPartialSum
+#print axioms TwinPrime.Analytic.quadraticProductRealPartialSum_mono
+#print axioms TwinPrime.Analytic.one_le_quadraticProductDirichletPartialSum
+#check TwinPrime.Analytic.norm_deriv_LFunction_near_one_le
+#check TwinPrime.Analytic.norm_LFunction_one_le_log_sq_gap
+#check TwinPrime.Analytic.exists_pos_le_primitive_real_zero_gap_of_conductor_le
+#check TwinPrime.Analytic.LFunction_zero_in_log_region_power_gap_of_value_lower_bound
+#check TwinPrime.Analytic.quadraticProductCoefficients_nonneg
+#check TwinPrime.Analytic.one_le_quadraticProductCoefficients_square
+#check TwinPrime.Analytic.LSeries_quadraticProductCoefficients
+#check TwinPrime.Analytic.tendsto_mul_quadraticLFunctionProduct_at_one
+#check TwinPrime.Analytic.one_le_quadraticProductDirichletPartialSum
+#check TwinPrime.twinPrimeConjecture_of_siegel_walfisz_and_bilinear
+
+-- Smoothed inversion, zero-free strip norms, and actual contour estimates.
+#print axioms TwinPrime.Analytic.wide_norm_deriv_le_of_re_le_on_ball
+#print axioms TwinPrime.Analytic.wide_norm_logDerivative_le_of_nonvanishing_on_ball
+#print axioms TwinPrime.Analytic.wide_zero_removal_log_budget_le_of_jensen
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_LFunction_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_LFunction_sub_zero_sum_le_of_one_le_re
+#print axioms TwinPrime.Analytic.sum_divisor_regularizedZeta_le_log_height
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_regularizedZeta_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_regularizedZeta_sub_zero_sum_le_of_one_le_re
+#print axioms TwinPrime.Analytic.wide_norm_logDeriv_zeta_add_pole_sub_zero_sum_le
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_antitone_abs
+#print axioms TwinPrime.Analytic.zetaLogZeroFreeWidth_antitone_abs
+#print axioms TwinPrime.Analytic.primitiveZeroFreeRectangleWidth_pos
+#print axioms TwinPrime.Analytic.primitiveZeroFreeRectangleWidth_le_one_thirtysecond
+#print axioms TwinPrime.Analytic.twice_primitiveZeroFreeRectangleWidth_le_log_width
+#print axioms TwinPrime.Analytic.twice_primitiveZeroFreeRectangleWidth_le_power_gap
+#print axioms TwinPrime.Analytic.exists_LFunction_zero_free_rectangle
+#print axioms TwinPrime.Analytic.regularizedRiemannZeta_ne_zero_on_rectangle
+#print axioms TwinPrime.Analytic.norm_divisor_zero_sum_le
+#print axioms TwinPrime.Analytic.analytic_zero_of_divisor_ne_zero
+#print axioms TwinPrime.Analytic.abs_im_le_height_add_two_of_mem_local_disk
+#print axioms TwinPrime.Analytic.divisor_zero_separation_of_zero_free_rectangle
+#print axioms TwinPrime.Analytic.norm_divisor_zero_sum_le_of_zero_free_rectangle
+#print axioms TwinPrime.Analytic.norm_two_add_I_im_le
+#print axioms TwinPrime.Analytic.mem_wide_center_disk_of_re_bounds
+#print axioms TwinPrime.Analytic.norm_logDeriv_LFunction_le_of_zero_free_rectangle
+#print axioms TwinPrime.Analytic.norm_logDeriv_regularizedZeta_le_of_zero_free_rectangle
+#print axioms TwinPrime.Analytic.exists_uniform_LFunction_logDeriv_strip_bound
+#print axioms TwinPrime.Analytic.zetaEvaluationWidth_pos
+#print axioms TwinPrime.Analytic.norm_logDeriv_regularizedZeta_le_in_strip
+#print axioms TwinPrime.Analytic.mellinRamp_eq_of_le_one
+#print axioms TwinPrime.Analytic.mellinRamp_eq_zero_of_one_le
+#print axioms TwinPrime.Analytic.continuous_mellinRamp
+#print axioms TwinPrime.Analytic.mellinConvergent_mellinRamp
+#print axioms TwinPrime.Analytic.mellin_mellinRamp
+#print axioms TwinPrime.Analytic.hasMellin_mellinRamp
+#print axioms TwinPrime.Analytic.norm_mellinRampKernel_vertical_le
+#print axioms TwinPrime.Analytic.verticalIntegrable_mellinRampKernel
+#print axioms TwinPrime.Analytic.verticalIntegrable_mellin_mellinRamp
+#print axioms TwinPrime.Analytic.mellinInv_mellinRampKernel
+#print axioms TwinPrime.Analytic.integratedWeightedPartialSum_eq_mul_weightedPartialSum
+#print axioms TwinPrime.Analytic.integratedWeightedPartialSum_add_sub
+#print axioms TwinPrime.Analytic.integratedWeightedPartialSum_forward_difference
+#print axioms TwinPrime.Analytic.shortInterval_weight_nonneg_le_one
+#print axioms TwinPrime.Analytic.norm_integratedWeightedPartialSum_forward_difference_sub_sum_le
+#print axioms TwinPrime.Analytic.card_shortInterval_le
+#print axioms TwinPrime.Analytic.norm_integratedWeightedPartialSum_forward_difference_sub_sum_le_const
+#print axioms TwinPrime.Analytic.norm_mangoldt_character_forward_difference_sub_sum_le
+#print axioms TwinPrime.Analytic.mellinPoleWeight_eq_of_le_one
+#print axioms TwinPrime.Analytic.mellinPoleWeight_eq_zero_of_one_le
+#print axioms TwinPrime.Analytic.continuousAt_mellinPoleWeight
+#print axioms TwinPrime.Analytic.mellinConvergent_mellinPoleWeight
+#print axioms TwinPrime.Analytic.mellin_mellinPoleWeight
+#print axioms TwinPrime.Analytic.hasMellin_mellinPoleWeight
+#print axioms TwinPrime.Analytic.mellinPoleKernel_eq_mellinRampKernel_div
+#print axioms TwinPrime.Analytic.norm_mellinPoleKernel_vertical_le
+#print axioms TwinPrime.Analytic.verticalIntegrable_mellinPoleKernel
+#print axioms TwinPrime.Analytic.verticalIntegrable_mellin_mellinPoleWeight
+#print axioms TwinPrime.Analytic.mellinInv_mellinPoleKernel
+#print axioms TwinPrime.Analytic.mellinPoleWeight_one_div
+#print axioms TwinPrime.Analytic.mellinInv_mellinPoleKernel_one_div
+#print axioms TwinPrime.Analytic.norm_mellinPoleWeight_one_div_sub_half_le
+#print axioms TwinPrime.Analytic.siegelWalfiszStripDenominator_pos
+#print axioms TwinPrime.Analytic.siegelWalfiszStripWidthConstant_pos
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_polylog_lower_bound
+#print axioms TwinPrime.Analytic.polylog_conductor_power_gap_lower_bound
+#print axioms TwinPrime.Analytic.siegelWalfiszStripWidthConstant_mul_rpow_le
+#print axioms TwinPrime.Analytic.exists_siegelWalfisz_stripWidth_lower_bound
+#print axioms TwinPrime.Analytic.norm_integral_Ioi_le_of_inv_sq_bound
+#print axioms TwinPrime.Analytic.norm_integral_sub_intervalIntegral_le_of_inv_sq_bound
+#print axioms TwinPrime.Analytic.norm_mellinRampKernel_le_inv_im_sq
+#print axioms TwinPrime.Analytic.mangoldtDirichletMass_le_pole_add_forty
+#print axioms TwinPrime.Analytic.norm_mangoldt_mellin_integrand_le_inv_sq
+#print axioms TwinPrime.Analytic.norm_LSeries_term_vertical_eq
+#print axioms TwinPrime.Analytic.integrable_LSeries_mellinRamp_integrand
+#print axioms TwinPrime.Analytic.mellinInv_LSeries_mul_mellinRampKernel
+#print axioms TwinPrime.Analytic.mellinInv_LSeries_mul_mellinRampKernel_eq_weightedPartialSum
+#print axioms TwinPrime.Analytic.verticalIntegrable_LSeries_mul_mellinRampKernel
+#print axioms TwinPrime.Analytic.verticalIntegrable_mangoldt_mellinRampKernel
+#print axioms TwinPrime.Analytic.integrable_mangoldt_mellinRamp_integrand
+#print axioms TwinPrime.Analytic.weighted_mangoldt_sum_eq_mellinInv
+#print axioms TwinPrime.Analytic.sum_Icc_mangoldt_ramp_eq_mellinInv
+#print axioms TwinPrime.Analytic.differentiableOn_mellinContourIntegrand
+#print axioms TwinPrime.Analytic.mellinVerticalSegment_sub_eq
+#print axioms TwinPrime.Analytic.norm_mellinRampKernel_le_one_div_im_sq
+#print axioms TwinPrime.Analytic.norm_mellinContourIntegrand_horizontal_le
+#print axioms TwinPrime.Analytic.norm_mellinHorizontalSegment_le
+#print axioms TwinPrime.Analytic.norm_mellinHorizontalDifference_le
+#print axioms TwinPrime.Analytic.norm_mellinVerticalSegment_le
+#print axioms TwinPrime.Analytic.norm_mellinVerticalSegment_right_le
+#print axioms TwinPrime.Analytic.siegelWalfiszStripNumeratorConstant_pos
+#print axioms TwinPrime.Analytic.siegelWalfiszStripBudgetConstant_pos
+#print axioms TwinPrime.Analytic.primitiveStripLogNumerator_polylog_le
+#print axioms TwinPrime.Analytic.siegelWalfiszStripBudgetConstant_bound
+#print axioms TwinPrime.Analytic.exists_siegelWalfisz_stripBudget_bound
+#print axioms TwinPrime.Analytic.one_div_cpow_neg_eq
+#print axioms TwinPrime.Analytic.mellinInv_one_div_eq_contour_integral
+#print axioms TwinPrime.Analytic.integrable_mangoldt_contour_integrand
+#print axioms TwinPrime.Analytic.norm_weighted_mangoldt_sum_sub_vertical_le
+#print axioms TwinPrime.Analytic.norm_weighted_mangoldt_sum_le_contour_budget
+#print axioms TwinPrime.Analytic.norm_weighted_primitive_mangoldt_sum_le_of_zero_free_rectangle
+#print axioms TwinPrime.Analytic.exists_uniform_smoothed_primitive_mangoldt_contour_bound
+#check TwinPrime.Analytic.weighted_mangoldt_sum_eq_mellinInv
+#check TwinPrime.Analytic.exists_uniform_smoothed_primitive_mangoldt_contour_bound
+#check TwinPrime.Analytic.exists_siegelWalfisz_stripBudget_bound
+#check TwinPrime.twinPrimeConjecture_of_siegel_walfisz_and_bilinear
+
+-- Character convolution cancellation, ordered continuation, and residue main term.
+#print axioms TwinPrime.Analytic.complexArithmeticSummatory_nat
+#print axioms TwinPrime.Analytic.complexArithmeticSummatory_convolution_hyperbola
+#print axioms TwinPrime.Analytic.norm_complexArithmeticSummatory_le_length
+#print axioms TwinPrime.Analytic.norm_complex_hyperbola_strip_le
+#print axioms TwinPrime.Analytic.norm_convolution_summatory_le_three_mul_sqrt
+#print axioms TwinPrime.Analytic.character_sum_range_modulus_eq_zero
+#print axioms TwinPrime.Analytic.character_sum_shifted_range_modulus_eq_zero
+#print axioms TwinPrime.Analytic.character_sum_Ioc_eq_mod
+#print axioms TwinPrime.Analytic.norm_character_sum_Ioc_le_length
+#print axioms TwinPrime.Analytic.norm_character_sum_Ioc_le_remainder
+#print axioms TwinPrime.Analytic.norm_character_sum_Ioc_le_modulus
+#print axioms TwinPrime.Analytic.norm_character_sum_Ioc_interval_le_length
+#print axioms TwinPrime.Analytic.norm_character_sum_Ioc_interval_le_two_modulus
+#print axioms TwinPrime.Analytic.sum_norm_convolution_le_sum_sum
+#print axioms TwinPrime.Analytic.sum_norm_Ioc_le_nat
+#print axioms TwinPrime.Analytic.sum_norm_convolution_le_of_linear_mass
+#print axioms TwinPrime.Analytic.sum_norm_convolution_le_mul_one_add_log_nat
+#print axioms TwinPrime.Analytic.sum_norm_triple_convolution_le_mul_one_add_log_sq_nat
+#print axioms TwinPrime.Analytic.sum_norm_Ioc_floor_le
+#print axioms TwinPrime.Analytic.norm_sum_Ioc_floor_le
+#print axioms TwinPrime.Analytic.sum_norm_convolution_le_mul_one_add_log
+#print axioms TwinPrime.Analytic.sum_norm_triple_convolution_le_mul_one_add_log_sq
+#print axioms TwinPrime.Analytic.norm_characterArithmetic_le_one
+#print axioms TwinPrime.Analytic.sum_norm_characterArithmetic_le
+#print axioms TwinPrime.Analytic.norm_sum_characterArithmetic_le
+#print axioms TwinPrime.Analytic.sum_norm_two_character_convolution_le
+#print axioms TwinPrime.Analytic.sum_norm_three_character_convolution_le
+#print axioms TwinPrime.Analytic.rpow_mul_norm_cpow_neg_sub_le
+#print axioms TwinPrime.Analytic.norm_sum_Ioc_cpow_mul_le_of_anchored_power_sums
+#print axioms TwinPrime.Analytic.norm_sum_Ioc_cpow_mul_le_of_power_partial_sums
+#print axioms TwinPrime.Analytic.powerDirichletPartialSum_sub
+#print axioms TwinPrime.Analytic.cauchySeq_powerDirichletPartialSum
+#print axioms TwinPrime.Analytic.exists_powerDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.sum_Ioc_rpow_neg_le
+#print axioms TwinPrime.Analytic.sum_Ioc_natFloor_rpow_neg_le
+#print axioms TwinPrime.Analytic.sum_Ioc_natFloor_one_div_sqrt_le
+#print axioms TwinPrime.Analytic.sum_Ioc_one_div_sqrt_le
+#print axioms TwinPrime.Analytic.complexArithmeticSummatory_zeta
+#print axioms TwinPrime.Analytic.norm_natFloor_sub_self_le_one
+#print axioms TwinPrime.Analytic.norm_zeta_hyperbola_head_sub_reciprocal_le
+#print axioms TwinPrime.Analytic.norm_zeta_convolution_sub_main_le_hyperbola
+#print axioms TwinPrime.Analytic.sum_characterArithmetic_Ioc_eq
+#print axioms TwinPrime.Analytic.norm_characterArithmetic_sum_le_modulus
+#print axioms TwinPrime.Analytic.norm_complexArithmeticSummatory_character_le_modulus
+#print axioms TwinPrime.Analytic.norm_two_character_convolution_summatory_le
+#print axioms TwinPrime.Analytic.norm_three_character_convolution_summatory_le
+#print axioms TwinPrime.Analytic.tendsto_powerDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.norm_powerDirichletLimit_sub_partialSum_le
+#print axioms TwinPrime.Analytic.norm_powerDirichletLimit_sub_partialSum_le_uniform
+#print axioms TwinPrime.Analytic.tendstoUniformlyOn_powerDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_powerDirichletPartialSum_limit
+#print axioms TwinPrime.Analytic.differentiable_powerDirichletPartialSum
+#print axioms TwinPrime.Analytic.differentiableOn_powerDirichletLimit
+#print axioms TwinPrime.Analytic.powerDirichletLimit_eqOn_of_eqOn_right
+#print axioms TwinPrime.Analytic.powerDirichletLimit_eqOn_of_tendsto_right
+#print axioms TwinPrime.Analytic.tendsto_powerDirichletPartialSum_LSeries
+#print axioms TwinPrime.Analytic.powerDirichletLimit_eqOn_of_LSeries_right
+#print axioms TwinPrime.Analytic.norm_sub_powerDirichletPartialSum_le_of_eqOn
+#print axioms TwinPrime.Analytic.one_add_log_le_one_add_inv_mul_rpow
+#print axioms TwinPrime.Analytic.one_add_log_le_thirteen_mul_rpow
+#print axioms TwinPrime.Analytic.norm_three_character_convolution_summatory_le_power
+#print axioms TwinPrime.Analytic.norm_three_character_convolution_prefix_le_power
+#print axioms TwinPrime.Analytic.norm_zeta_convolution_power_strip_le
+#print axioms TwinPrime.Analytic.natFloor_mul_norm_complexArithmeticSummatory_le
+#print axioms TwinPrime.Analytic.natFloor_rpow_neg_quarter_le
+#print axioms TwinPrime.Analytic.powerDirichletPartialSum_one_eq
+#print axioms TwinPrime.Analytic.norm_prefix_le_three_quarter_power_of_real_bound
+#print axioms TwinPrime.Analytic.norm_reciprocal_sum_sub_powerDirichletLimit_le
+#print axioms TwinPrime.Analytic.norm_reciprocal_sum_natFloor_sub_powerDirichletLimit_le
+#print axioms TwinPrime.Analytic.norm_zeta_convolution_sub_powerDirichletLimit_le
+#print axioms TwinPrime.Analytic.LSeriesSummable_characterArithmeticFunction
+#print axioms TwinPrime.Analytic.LSeries_characterArithmeticFunction
+#print axioms TwinPrime.Analytic.LSeriesSummable_three_character_convolution
+#print axioms TwinPrime.Analytic.LSeries_three_character_convolution
+#print axioms TwinPrime.Analytic.differentiable_threeLFunctionProduct
+#print axioms TwinPrime.Analytic.powerDirichletPartialSum_one_eq_reciprocal
+#print axioms TwinPrime.Analytic.powerDirichletLimit_three_character_convolution_eqOn
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_three_character_convolution_LFunctions
+#print axioms TwinPrime.Analytic.tendsto_three_character_convolution_partialSum_LFunctions
+#print axioms TwinPrime.Analytic.norm_threeLFunctionProduct_sub_partialSum_le
+#print axioms TwinPrime.Analytic.tendsto_three_character_convolution_reciprocal_sum
+#print axioms TwinPrime.Analytic.norm_threeLFunctionProduct_one_sub_reciprocal_sum_le
+#print axioms TwinPrime.Analytic.norm_zeta_three_character_convolution_sub_LFunction_product_le
+#print axioms TwinPrime.Analytic.norm_quadraticProductCoefficients_summatory_sub_residue_le
+#print axioms TwinPrime.Analytic.norm_quadraticProductCoefficients_summatory_sub_residue_le_of_distinct
+#check TwinPrime.Analytic.norm_three_character_convolution_summatory_le
+#check TwinPrime.Analytic.powerDirichletLimit_three_character_convolution_eqOn
+#check TwinPrime.Analytic.norm_threeLFunctionProduct_one_sub_reciprocal_sum_le
+#check TwinPrime.Analytic.norm_zeta_convolution_sub_powerDirichletLimit_le
+#check TwinPrime.Analytic.norm_quadraticProductCoefficients_summatory_sub_residue_le
+#check TwinPrime.twinPrimeConjecture_of_siegel_walfisz_and_bilinear
+
+-- Actual residue comparison, uniform Siegel value bound, and power zero gap.
+#print axioms TwinPrime.Analytic.norm_zeta_real_sum_sub_zeta_sub_main_le
+#print axioms TwinPrime.Analytic.norm_zeta_real_pole_term
+#print axioms TwinPrime.Analytic.norm_zeta_real_sum_sub_zeta_le
+#print axioms TwinPrime.Analytic.power_le_residueCutoff
+#print axioms TwinPrime.Analytic.one_le_residueCutoff
+#print axioms TwinPrime.Analytic.residueCutoff_le_twice_power
+#print axioms TwinPrime.Analytic.residueCutoff_error_le_half
+#print axioms TwinPrime.Analytic.centeredQuadraticProductCoefficients_apply
+#print axioms TwinPrime.Analytic.sum_Ioc_centeredQuadraticProductCoefficients
+#print axioms TwinPrime.Analytic.norm_centeredQuadraticProductCoefficients_prefix_le
+#print axioms TwinPrime.Analytic.powerDirichletPartialSum_centeredQuadraticProductCoefficients
+#print axioms TwinPrime.Analytic.centeredQuadraticLFunctionProduct_one
+#print axioms TwinPrime.Analytic.differentiable_centeredQuadraticLFunctionProduct
+#print axioms TwinPrime.Analytic.differentiable_centeredQuadraticLFunctionProduct_of_distinct
+#print axioms TwinPrime.Analytic.mul_centeredQuadraticLFunctionProduct
+#print axioms TwinPrime.Analytic.centeredQuadraticLFunctionProduct_eq_of_ne_one
+#print axioms TwinPrime.Analytic.centeredQuadraticLFunctionProduct_eq_of_product_eq_zero
+#print axioms TwinPrime.Analytic.centeredQuadraticLFunctionProduct_eq_of_LFunction_zero
+#print axioms TwinPrime.Analytic.LSeriesSummable_centeredQuadraticProductCoefficients
+#print axioms TwinPrime.Analytic.LSeries_centeredQuadraticProductCoefficients
+#print axioms TwinPrime.Analytic.powerDirichletLimit_centeredQuadraticProductCoefficients_eqOn
+#print axioms TwinPrime.Analytic.tendsto_centeredQuadraticProduct_partialSum
+#print axioms TwinPrime.Analytic.norm_centeredQuadraticLFunctionProduct_sub_partialSum_le
+#print axioms TwinPrime.Analytic.norm_centeredQuadraticLFunctionProduct_real_sub_partialSum_le
+#print axioms TwinPrime.Analytic.residueConductorConstant_pos
+#print axioms TwinPrime.Analytic.residueCutoff_le_conductor_power
+#print axioms TwinPrime.Analytic.residue_gap_conductor_bound
+#print axioms TwinPrime.Analytic.norm_quadraticProductPartialSum_sub_product_sub_residue_le
+#print axioms TwinPrime.Analytic.one_le_norm_quadraticProductDirichletPartialSum
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_lower_bound_of_nonpos
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_lower_bound_of_zero
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_lower_bound_at_cutoff_of_nonpos
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_lower_bound_at_cutoff_of_zero
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_lower_bound_of_LFunction_zero
+#print axioms TwinPrime.Analytic.quadraticProduct_residue_conductor_lower_bound_of_nonpos
+#print axioms TwinPrime.Analytic.powerDirichletLimit_character_eqOn
+#print axioms TwinPrime.Analytic.tendstoLocallyUniformlyOn_character_powerDirichletPartialSum_LFunction
+#print axioms TwinPrime.Analytic.tendsto_character_powerDirichletPartialSum_LFunction
+#print axioms TwinPrime.Analytic.norm_LFunction_sub_powerDirichletPartialSum_le_of_nonprincipal
+#print axioms TwinPrime.Analytic.norm_character_reciprocal_partialSum_le_one_add_log
+#print axioms TwinPrime.Analytic.norm_LFunction_one_le_five_add_log
+#print axioms TwinPrime.Analytic.prod_one_add_inv_primeFactors_le_harmonic
+#print axioms TwinPrime.Analytic.prod_one_add_inv_primeFactors_le_one_add_log
+#print axioms TwinPrime.Analytic.norm_characterEulerMultiplier_one_le
+#print axioms TwinPrime.Analytic.norm_LFunction_changeLevel_one_le
+#print axioms TwinPrime.Analytic.LFunction_changeLevel_eq_zero_of_eq_zero
+#print axioms TwinPrime.Analytic.characterEulerFactor_ne_zero_of_re_pos
+#print axioms TwinPrime.Analytic.characterEulerMultiplier_ne_zero_of_re_pos
+#print axioms TwinPrime.Analytic.LFunction_changeLevel_eq_zero_iff_of_re_pos
+#print axioms TwinPrime.Analytic.commonLevel_conductors
+#print axioms TwinPrime.Analytic.commonLevel_ne_one
+#print axioms TwinPrime.Analytic.commonLevel_sq_eq_one
+#print axioms TwinPrime.Analytic.commonLevel_ne_of_primitive_levels_ne
+#print axioms TwinPrime.Analytic.commonLevel_mul_ne_one
+#print axioms TwinPrime.Analytic.commonLevel_mul_ne_one_of_lt
+#print axioms TwinPrime.Analytic.LFunction_real_im_eq_zero
+#print axioms TwinPrime.Analytic.LFunction_real_eq_ofReal_re
+#print axioms TwinPrime.Analytic.one_quarter_le_LFunction_two_re
+#print axioms TwinPrime.Analytic.LFunction_real_re_pos_of_no_zeros
+#print axioms TwinPrime.Analytic.riemannZeta_re_neg_of_nineteen_twentieths_le
+#print axioms TwinPrime.Analytic.quadraticLFunctionProduct_real_re_neg_of_no_zeros
+#print axioms TwinPrime.Analytic.one_lt_conductor_of_ne_one
+#print axioms TwinPrime.Analytic.primitiveCharacter_sq_eq_one
+#print axioms TwinPrime.Analytic.LFunction_eq_zero_iff_primitiveCharacter_of_re_pos
+#print axioms TwinPrime.Analytic.LFunction_nonprincipal_quadratic_ne_zero_of_primitive_interval
+#print axioms TwinPrime.Analytic.commonLevel_quadraticLFunctionProduct_re_neg_of_primitive_interval
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_three
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_isQuadratic
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_sq_eq_one
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_ne_one
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_conductor
+#print axioms TwinPrime.Analytic.auxiliaryQuadraticCharacter_isPrimitive
+#print axioms TwinPrime.Analytic.exists_primitive_nonprincipal_quadratic_character
+#print axioms TwinPrime.Analytic.norm_commonLevel_quadraticProduct_residue_le
+#print axioms TwinPrime.Analytic.commonLevel_quadraticLFunctionProduct_eq_zero_of_auxiliary_zero
+#print axioms TwinPrime.Analytic.commonLevel_LFunction_one_lower_bound_of_nonpos
+#print axioms TwinPrime.Analytic.commonLevel_LFunction_one_lower_bound_of_auxiliary_zero
+#print axioms TwinPrime.Analytic.siegelValuePowerConstant_pos
+#print axioms TwinPrime.Analytic.rpow_gap_mul_log_cube_le
+#print axioms TwinPrime.Analytic.siegelValuePowerConstant_mul_rpow_le
+#print axioms TwinPrime.Analytic.exists_siegel_value_bound_of_commonLevel_nonpos
+#print axioms TwinPrime.Analytic.siegel_value_lower_bound
+#print axioms TwinPrime.Analytic.LFunction_zero_in_log_region_power_gap
+#print axioms TwinPrime.Analytic.LFunction_real_zero_in_log_region_power_gap
+#check TwinPrime.Analytic.quadraticProduct_residue_conductor_lower_bound_of_nonpos
+#check TwinPrime.Analytic.norm_LFunction_one_le_five_add_log
+#check TwinPrime.Analytic.norm_LFunction_changeLevel_one_le
+#check TwinPrime.Analytic.commonLevel_LFunction_one_lower_bound_of_auxiliary_zero
+#check TwinPrime.Analytic.siegel_value_lower_bound
+#check TwinPrime.Analytic.LFunction_zero_in_log_region_power_gap
+#check TwinPrime.twinPrimeConjecture_of_siegel_walfisz_and_bilinear
+
+-- Independent centered Siegel--Walfisz and the single-input twin-prime endpoint.
+#print axioms TwinPrime.Analytic.weighted_vonMangoldt_sum_eq_modOne
+#print axioms TwinPrime.Analytic.regularized_mellin_integrand_eq_difference
+#print axioms TwinPrime.Analytic.integrable_mellinPole_contour_integrand
+#print axioms TwinPrime.Analytic.integrable_regularizedZeta_contour_integrand
+#print axioms TwinPrime.Analytic.mellinPoleWeight_eq_contour_integral
+#print axioms TwinPrime.Analytic.weighted_vonMangoldt_sum_sub_pole_eq_contour_integral
+#print axioms TwinPrime.Analytic.norm_negativeRegularizedZetaLogDerivative_vertical_le
+#print axioms TwinPrime.Analytic.norm_regularizedZeta_mellin_integrand_le_inv_sq
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_pole_sub_vertical_le
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_pole_le_contour_budget
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_pole_le_of_width
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_pole_le
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_half_le
+#print axioms TwinPrime.Analytic.rpow_one_add_inv_log
+#print axioms TwinPrime.Analytic.rpow_one_sub_eq_mul_exp
+#print axioms TwinPrime.Analytic.rpow_one_sub_le_of_width
+#print axioms TwinPrime.Analytic.tendsto_rpow_mul_exp_neg_sqrt
+#print axioms TwinPrime.Analytic.eventually_mul_exp_neg_sqrt_le_rpow
+#print axioms TwinPrime.Analytic.mangoldtMass_right_line_le
+#print axioms TwinPrime.Analytic.primitiveLogZeroFreeWidth_one_eq_twice_zeta
+#print axioms TwinPrime.Analytic.common_principal_width_le_zeta
+#print axioms TwinPrime.Analytic.zetaStripBudget_le_twice_primitive
+#print axioms TwinPrime.Analytic.principal_common_strip_width_and_budget
+#print axioms TwinPrime.Analytic.norm_weighted_vonMangoldt_sub_half_le_at_common_width
+#print axioms TwinPrime.Analytic.smoothedPrincipalContourBudget_eq
+#print axioms TwinPrime.Analytic.smoothedPrincipalContourBudget_le_three_errors
+#print axioms TwinPrime.Analytic.contourAbsorptionConstant_pos
+#print axioms TwinPrime.Analytic.eventually_smoothedPrincipalContourBudget_le
+#print axioms TwinPrime.Analytic.smoothedMangoldtContourBudget_le_principal
+#print axioms TwinPrime.Analytic.primitiveStripLogDerivativeBudget_nonneg
+#print axioms TwinPrime.Analytic.zetaStripLogDerivativeBudget_nonneg
+#print axioms TwinPrime.Analytic.eventually_log_rpow_le_self
+#print axioms TwinPrime.Analytic.smoothed_siegel_walfisz
+#print axioms TwinPrime.Analytic.centeredRealCharacterPsi_natCast
+#print axioms TwinPrime.Analytic.integrated_mangoldt_character_eq_centered
+#print axioms TwinPrime.Analytic.norm_centeredRealCharacterPsi_le_smoothed
+#print axioms TwinPrime.Analytic.norm_centeredRealCharacterPsi_le_of_two_smoothed
+#print axioms TwinPrime.Analytic.real_siegel_walfisz
+#print axioms TwinPrime.Analytic.pointwise_siegel_walfisz
+#print axioms TwinPrime.Analytic.maximal_siegel_walfisz
+#print axioms TwinPrime.Analytic.maximal_bombieri_vinogradov
+#print axioms TwinPrime.Analytic.mertens_log_six
+#print axioms TwinPrime.twinPrimeConjecture_of_signed_bilinear
+#check TwinPrime.Analytic.smoothed_siegel_walfisz
+#check TwinPrime.Analytic.real_siegel_walfisz
+#check TwinPrime.Analytic.pointwise_siegel_walfisz
+#check TwinPrime.Analytic.maximal_bombieri_vinogradov
+#check TwinPrime.Analytic.mertens_log_six
+#check TwinPrime.twinPrimeConjecture_of_signed_bilinear
+
+-- Complete dispersion box sums and two distinct large-gcd removals.
+#print axioms TwinPrime.Analytic.mem_dispersionBoxIndices_iff
+#print axioms TwinPrime.Analytic.existsUnique_dispersion_dyadic_index
+#print axioms TwinPrime.Analytic.dispersionBoxIndices_card_le
+#print axioms TwinPrime.Analytic.dispersionBoxIndices_bounds
+#print axioms TwinPrime.Analytic.existsUnique_dispersionBox_of_bilinearPairs
+#print axioms TwinPrime.Analytic.bilinearTerm_eq_sum_dispersionBoxes
+#print axioms TwinPrime.Analytic.dispersionDiagonalSum_nonneg
+#print axioms TwinPrime.Analytic.dispersion_diagonal_sqrt_div_le
+#print axioms TwinPrime.Analytic.dispersionDiagonalSum_div_le
+#print axioms TwinPrime.Analytic.tendsto_primary_dispersion_diagonal_sum
+#print axioms TwinPrime.Analytic.dispersionOffDiagonalSum_nonneg
+#print axioms TwinPrime.Analytic.abs_bilinearBox_le_diagonal_add_offDiagonal
+#print axioms TwinPrime.Analytic.abs_bilinearTerm_le_dispersion_sums
+#print axioms TwinPrime.Analytic.neg_dispersion_sums_le_bilinearTerm
+#print axioms TwinPrime.Analytic.tendsto_primaryDispersionDiagonal_div_log_pow
+#print axioms TwinPrime.Analytic.tendsto_primaryDispersionDiagonal_div
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_div_of_offDiagonal
+#print axioms TwinPrime.Analytic.sum_Ioc_inv_sq_le_inv
+#print axioms TwinPrime.Analytic.card_largeGcd_rectangle_le
+#print axioms TwinPrime.Analytic.dispersionLargeGcdPairs_card_le
+#print axioms TwinPrime.Analytic.dispersionOffDiagonal_eq_small_add_large
+#print axioms TwinPrime.Analytic.abs_dispersionOffDiagonalLargeGcd_le_card
+#print axioms TwinPrime.Analytic.abs_dispersionOffDiagonalLargeGcd_le
+#print axioms TwinPrime.Analytic.dispersion_mass_mul_abs_largeGcd_le
+#print axioms TwinPrime.Analytic.one_le_dispersion_log
+#print axioms TwinPrime.Analytic.log_pow_le_dispersionGcdCutoff
+#print axioms TwinPrime.Analytic.one_le_dispersionGcdCutoff
+#print axioms TwinPrime.Analytic.dispersionGcdCutoff_le_two_log_pow
+#print axioms TwinPrime.Analytic.sqrt_dispersionGcdCutoff_error_le
+#print axioms TwinPrime.Analytic.dyadicNatDepth_two_mul_le_dispersion_log
+#print axioms TwinPrime.Analytic.dispersionGcdCutoff_family_error_le
+#print axioms TwinPrime.Analytic.tendsto_dispersionGcdCutoff_family_error
+#print axioms TwinPrime.Analytic.tendsto_div_of_dispersionGcdCutoff_bound
+#print axioms TwinPrime.Analytic.dispersionLargeGcdSum_nonneg
+#print axioms TwinPrime.Analytic.dispersionSmallGcdSum_nonneg
+#print axioms TwinPrime.Analytic.dispersion_largeGcd_sqrt_div_le
+#print axioms TwinPrime.Analytic.dispersionLargeGcdSum_div_le
+#print axioms TwinPrime.Analytic.abs_bilinearBox_le_gcd_dispersion
+#print axioms TwinPrime.Analytic.abs_bilinearTerm_le_gcd_dispersion
+#print axioms TwinPrime.Analytic.tendsto_primaryDispersionLargeGcd_div
+#print axioms TwinPrime.Analytic.neg_primary_gcd_dispersion_le_bilinearTerm
+#print axioms TwinPrime.Analytic.bilinearBox_filtered_eq_filtered_pair_sum
+#print axioms TwinPrime.Analytic.bilinearBoxLargeGcd_eq_filtered_pair_sum
+#print axioms TwinPrime.Analytic.bilinearBoxSmallGcd_eq_filtered_pair_sum
+#print axioms TwinPrime.Analytic.bilinearBox_eq_smallGcd_add_largeGcd
+#print axioms TwinPrime.Analytic.bilinearBoxLargeGcdPairs_card_le
+#print axioms TwinPrime.Analytic.abs_bilinearBoxLargeGcd_le_card
+#print axioms TwinPrime.Analytic.abs_bilinearBoxLargeGcd_le
+#print axioms TwinPrime.Analytic.bilinearTerm_eq_smallGcd_add_largeGcd
+#print axioms TwinPrime.Analytic.sum_bilinearPairs_filter_eq_sum_boxes
+#print axioms TwinPrime.Analytic.bilinearLargeGcd_eq_sum_boxes
+#print axioms TwinPrime.Analytic.bilinearSmallGcd_eq_sum_boxes
+#print axioms TwinPrime.Analytic.abs_bilinearLargeGcd_le
+#print axioms TwinPrime.Analytic.abs_bilinearLargeGcd_div_le
+#print axioms TwinPrime.Analytic.bilinearGcdCutoff_family_error_le
+#print axioms TwinPrime.Analytic.abs_bilinearLargeGcd_div_le_log
+#print axioms TwinPrime.Analytic.tendsto_bilinearGcd_log_error
+#print axioms TwinPrime.Analytic.primary_bilinear_eq_smallGcd_add_largeGcd
+#print axioms TwinPrime.Analytic.abs_primaryBilinearLargeGcd_div_le_log
+#print axioms TwinPrime.Analytic.tendsto_abs_primaryBilinearLargeGcd_div
+#print axioms TwinPrime.Analytic.tendsto_primaryBilinearLargeGcd_div
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_sub_smallGcd_div
+#check TwinPrime.Analytic.bilinearTerm_eq_sum_dispersionBoxes
+#check TwinPrime.Analytic.tendsto_primaryDispersionDiagonal_div_log_pow
+#check TwinPrime.Analytic.dispersion_mass_mul_abs_largeGcd_le
+#check TwinPrime.Analytic.tendsto_primaryDispersionLargeGcd_div
+#check TwinPrime.Analytic.neg_primary_gcd_dispersion_le_bilinearTerm
+#check TwinPrime.Analytic.abs_primaryBilinearLargeGcd_div_le_log
+#check TwinPrime.Analytic.tendsto_primary_bilinear_sub_smallGcd_div
+#check TwinPrime.twinPrimeConjecture_of_signed_bilinear
+
+-- Thin active band, large prime squares, and the exact simultaneous residual.
+#print axioms TwinPrime.Analytic.dispersionActiveBoxIndices_subset
+#print axioms TwinPrime.Analytic.mem_dispersionActiveBoxIndices_iff
+#print axioms TwinPrime.Analytic.dyadic_product_band_exponent_le
+#print axioms TwinPrime.Analytic.dispersionActiveBoxIndices_card_le
+#print axioms TwinPrime.Analytic.dispersionEntry_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.bilinearBox_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.dispersionDiagonal_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.dispersionOffDiagonal_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.dispersionOffDiagonalLargeGcd_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.dispersionOffDiagonalSmallGcd_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.sum_dispersionBoxIndices_eq_active
+#print axioms TwinPrime.Analytic.bilinearTerm_eq_sum_dispersionActiveBoxes
+#print axioms TwinPrime.Analytic.dispersionDiagonalSum_eq_active
+#print axioms TwinPrime.Analytic.dispersionOffDiagonalSum_eq_active
+#print axioms TwinPrime.Analytic.dispersionLargeGcdSum_eq_active
+#print axioms TwinPrime.Analytic.dispersionSmallGcdSum_eq_active
+#print axioms TwinPrime.Analytic.dispersionGcdCutoff_linear_family_error_le
+#print axioms TwinPrime.Analytic.bilinearGcdCutoff_linear_family_error_le
+#print axioms TwinPrime.Analytic.dispersionDiagonalSum_div_le_linear
+#print axioms TwinPrime.Analytic.dispersionLargeGcdSum_div_le_linear
+#print axioms TwinPrime.Analytic.primaryDispersionLargeGcd_div_le_log_sq
+#print axioms TwinPrime.Analytic.bilinearBoxLargeGcd_eq_zero_of_not_band
+#print axioms TwinPrime.Analytic.bilinearLargeGcd_eq_sum_active_boxes
+#print axioms TwinPrime.Analytic.abs_bilinearLargeGcd_div_le_linear
+#print axioms TwinPrime.Analytic.abs_bilinearLargeGcd_div_le_log_seven
+#print axioms TwinPrime.Analytic.abs_primaryBilinearLargeGcd_div_le_log_seven
+#print axioms TwinPrime.Analytic.mem_positiveHyperbolaPairs_iff
+#print axioms TwinPrime.Analytic.positiveHyperbolaPairs_card
+#print axioms TwinPrime.Analytic.positiveHyperbolaPairs_card_le
+#print axioms TwinPrime.Analytic.prime_sq_dvd_mul_of_squarefree_left
+#print axioms TwinPrime.Analytic.largePrimeSquarePairs_card_le
+#print axioms TwinPrime.Analytic.bilinearLargePrimeSquareAbsMass_nonneg
+#print axioms TwinPrime.Analytic.bilinearLargePrimeSquareAbsMass_le
+#print axioms TwinPrime.Analytic.abs_bilinearLargePrimeSquare_le
+#print axioms TwinPrime.Analytic.bilinearTerm_eq_noLargePrimeSquare_add_largePrimeSquare
+#print axioms TwinPrime.Analytic.bilinearLargePrimeSquareAbsMass_div_le_log
+#print axioms TwinPrime.Analytic.tendsto_bilinearLargePrimeSquareAbsMass_div
+#print axioms TwinPrime.Analytic.tendsto_bilinearLargePrimeSquare_div
+#print axioms TwinPrime.Analytic.tendsto_bilinearTerm_sub_noLargePrimeSquare_div
+#print axioms TwinPrime.Analytic.structuredCore_condition_of_squarefree
+#print axioms TwinPrime.Analytic.bilinearSmallGcd_eq_core_add_square
+#print axioms TwinPrime.Analytic.abs_bilinearSmallGcdLargeSquare_le_mass
+#print axioms TwinPrime.Analytic.abs_bilinear_sub_structuredCore_le
+#print axioms TwinPrime.Analytic.abs_primary_bilinear_sub_structuredCore_div_le
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_sub_structuredCore_div
+#check TwinPrime.Analytic.dispersionActiveBoxIndices_card_le
+#check TwinPrime.Analytic.primaryDispersionLargeGcd_div_le_log_sq
+#check TwinPrime.Analytic.abs_primaryBilinearLargeGcd_div_le_log_seven
+#check TwinPrime.Analytic.bilinearLargePrimeSquareAbsMass_le
+#check TwinPrime.Analytic.bilinearLargePrimeSquareAbsMass_div_le_log
+#check TwinPrime.Analytic.structuredCore_condition_of_squarefree
+#check TwinPrime.Analytic.abs_primary_bilinear_sub_structuredCore_div_le
+#check TwinPrime.Analytic.tendsto_primary_bilinear_sub_structuredCore_div
+#check TwinPrime.twinPrimeConjecture_of_signed_bilinear
+
+-- Prime-only beta replacement and exact smooth/rough coefficients.
+#print axioms TwinPrime.Analytic.coprime_small_rough
+#print axioms TwinPrime.Analytic.small_divisor_mul_dvd_left_of_rough
+#print axioms TwinPrime.Analytic.vaughanBeta_eq_sum_primePow
+#print axioms TwinPrime.Analytic.vaughanBeta_mul_of_coprime
+#print axioms TwinPrime.Analytic.vaughanBeta_mul_small_rough
+#print axioms TwinPrime.Analytic.moebiusLow_mul_beta_small_rough
+#print axioms TwinPrime.Analytic.mangoldtHigh_mul_small_rough
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_zero_of_small_part
+#print axioms TwinPrime.Analytic.moebiusLow_mul_apply_mul_rough
+#print axioms TwinPrime.Analytic.coprime_smooth_rough
+#print axioms TwinPrime.Analytic.vaughanBeta_eq_zero_of_squarefree_smooth
+#print axioms TwinPrime.Analytic.vaughanBeta_mul_squarefree_smooth_rough
+#print axioms TwinPrime.Analytic.moebiusLow_mul_beta_squarefree_smooth_rough
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_mangoldtHigh_sub_of_squarefree_smooth_rough
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_mangoldt_sub_of_squarefree_smooth_rough
+#print axioms TwinPrime.Analytic.truncatedMoebiusSum_two_primes
+#print axioms TwinPrime.Analytic.vaughanBilinear_eq_log_of_two_small_primes
+#print axioms TwinPrime.Analytic.vaughanBilinear_nonneg_of_two_small_primes
+#print axioms TwinPrime.Analytic.primeVaughanBeta_apply
+#print axioms TwinPrime.Analytic.vaughanBeta_sub_primeVaughanBeta
+#print axioms TwinPrime.Analytic.primeVaughanBeta_nonneg
+#print axioms TwinPrime.Analytic.primeVaughanBeta_le
+#print axioms TwinPrime.Analytic.positiveHyperbola_right_dvd_card_le
+#print axioms TwinPrime.Analytic.sum_hyperbola_divisor_tail_le
+#print axioms TwinPrime.Analytic.bilinearPrimeBetaErrorMass_nonneg
+#print axioms TwinPrime.Analytic.abs_bilinear_sub_primeBeta_le_mass
+#print axioms TwinPrime.Analytic.bilinearPrimeBetaErrorMass_le_tail
+#print axioms TwinPrime.Analytic.exists_nonprimeMangoldt_sqrt_bound
+#print axioms TwinPrime.Analytic.sum_nonprimeMangoldt_div_le_of_sqrt_bound
+#print axioms TwinPrime.Analytic.exists_nonprimeMangoldt_reciprocal_tail_bound
+#print axioms TwinPrime.Analytic.tendsto_dispersion_log_pow_mul_primaryCutoff_neg_half
+#print axioms TwinPrime.Analytic.tendsto_dispersion_log_pow_div_sqrt_primaryCutoff
+#print axioms TwinPrime.Analytic.tendsto_mul_dispersion_log_pow_of_primaryCutoff_neg_half_bound
+#print axioms TwinPrime.Analytic.exists_bilinearPrimeBetaErrorMass_bound
+#print axioms TwinPrime.Analytic.exists_abs_bilinear_sub_primeBeta_bound
+#print axioms TwinPrime.Analytic.tendsto_bilinearPrimeBetaErrorMass_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_bilinearPrimeBetaErrorMass_div
+#print axioms TwinPrime.Analytic.tendsto_bilinear_sub_primeBeta_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_bilinear_sub_primeBeta_div
+#print axioms TwinPrime.Analytic.primeMangoldtHigh_apply
+#print axioms TwinPrime.Analytic.primeVaughanBeta_eq_primeMangoldtHigh_mul_zeta
+#print axioms TwinPrime.Analytic.moebius_mul_primeVaughanBeta
+#print axioms TwinPrime.Analytic.primeVaughanBeta_mul_smooth
+#print axioms TwinPrime.Analytic.moebiusLow_mul_primeBeta_smooth_rough
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_eq_primeMangoldtHigh_sub_of_smooth_rough
+#print axioms TwinPrime.Analytic.primeVaughanBeta_eq_sum_primeFactors
+#print axioms TwinPrime.Analytic.primeVaughanBeta_eq_sum_log_of_rough
+#print axioms TwinPrime.Analytic.primeMangoldtHigh_mul_smooth_eq_zero
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_eq_neg_mul_of_nontrivial_smooth_rough
+#print axioms TwinPrime.Analytic.primeVaughanBeta_eq_zero_of_le
+#print axioms TwinPrime.Analytic.sum_bilinearPairs_eq_sum_divisorsAntidiagonal
+#print axioms TwinPrime.Analytic.bilinearPrimeBeta_eq_grouped
+
+-- Signed right-cutoff change below the full classical power level.
+#print axioms TwinPrime.Analytic.eventually_modulus_le_BV_range_of_power_bound
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_log_mul_sum_error_div_of_power_level
+#print axioms TwinPrime.Analytic.mixedEvenWeightBudget_nonneg
+#print axioms TwinPrime.Analytic.mixedEvenWeightBudget_le_of_product_le
+#print axioms TwinPrime.Analytic.tendsto_mixedEvenWeightBudget_div_of_product_le
+#print axioms TwinPrime.Analytic.quarterCutoff_pos
+#print axioms TwinPrime.Analytic.quarterCutoff_le
+#print axioms TwinPrime.Analytic.quarterCutoff_lt
+#print axioms TwinPrime.Analytic.quarterCutoff_mono
+#print axioms TwinPrime.Analytic.primaryCutoff_le_quarterCutoff
+#print axioms TwinPrime.Analytic.tendsto_quarterCutoff
+#print axioms TwinPrime.Analytic.quarterCutoff_pow_four_le
+#print axioms TwinPrime.Analytic.primaryCutoff_mul_quarterCutoff_le_rpow
+#print axioms TwinPrime.Analytic.primaryCutoff_mul_quarterCutoff_le
+#print axioms TwinPrime.Analytic.log_quarterCutoff_add_one_le_five_log_primaryCutoff
+#print axioms TwinPrime.Analytic.bilinearTerm_sub_eq_typeITerm_sub
+#print axioms TwinPrime.Analytic.bilinearTerm_cutoff_shift_error_le
+#print axioms TwinPrime.Analytic.tendsto_mul_log_sq_of_cutoff_log_comparison
+#print axioms TwinPrime.Analytic.tendsto_totientTypeIMain_of_log_comparison
+#print axioms TwinPrime.Analytic.typeICorrelation_error_le_mixed
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_mixed_typeI_error_div
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_mixed_typeI_div_sub_main
+#print axioms TwinPrime.Analytic.tendsto_totientTypeIMain_primary_of_right_le
+#print axioms TwinPrime.Analytic.eventually_rightCutoff_le_of_primary_product_bound
+#print axioms TwinPrime.Analytic.tendsto_typeITerm_primary_right_div_of_product_bound
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_sub_rightCutoff_div
+#print axioms TwinPrime.Analytic.tendsto_totientTypeIMain_primary_quarter
+#print axioms TwinPrime.Analytic.tendsto_typeITerm_primary_quarter_div
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_sub_quarter_div
+#print axioms TwinPrime.Analytic.tendsto_quarter_bilinear_sub_primeBeta_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_quarter_bilinear_sub_primeBeta_div
+#print axioms TwinPrime.Analytic.tendsto_primary_bilinear_sub_quarterPrimeBeta_div
+#print axioms TwinPrime.Analytic.moebiusLow_mul_primeBeta_mixed_smooth_rough
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_eq_primeMangoldtHigh_sub_of_mixed_smooth_rough
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_eq_neg_mul_of_nontrivial_mixed_smooth_rough
+#print axioms TwinPrime.Analytic.truncatedMoebiusSum_prime_of_cutoff_lt
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_eq_neg_primeBeta_of_middle_prime
+#print axioms TwinPrime.Analytic.primeVaughanBilinear_nonpos_of_middle_prime
+
+-- Exact finite center and arbitrary fixed logarithmic precision.
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_log_pow_mul_sum_error_div_of_power_level
+#print axioms TwinPrime.Analytic.tendsto_mixedEvenWeightBudget_div_mul_log_pow
+#print axioms TwinPrime.Analytic.correlation_sub_bilinear_add_classicalCenter_eq
+#print axioms TwinPrime.Analytic.classicalCorrelationCenter_error_le
+#print axioms TwinPrime.Analytic.classicalCorrelationCenter_error_le_product
+#print axioms TwinPrime.Analytic.centered_bilinear_cutoff_shift_eq
+#print axioms TwinPrime.Analytic.centered_bilinear_cutoff_shift_error_le
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_classicalCenter_error_div_mul_log_pow
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_mixed_typeI_error_div_mul_log_pow
+#print axioms TwinPrime.Analytic.MaximalBombieriVinogradov.tendsto_centered_bilinear_cutoff_shift_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_Epp_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_primary_classicalCenter_error_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_quarter_classicalCenter_error_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_primary_centered_bilinear_sub_quarter_div_mul_log_pow
+#print axioms TwinPrime.Analytic.tendsto_quarter_abs_bilinear_sub_primeBeta_div_mul_log_two_pow
+#print axioms TwinPrime.Analytic.tendsto_quarter_primeBeta_classicalCenter_error_div_mul_log_pow
+#print axioms TwinPrime.twinPrimeConjecture_of_cofinal_classicalCenter_log_gain
+#check TwinPrime.Analytic.tendsto_quarter_primeBeta_classicalCenter_error_div_mul_log_pow
+#check TwinPrime.twinPrimeConjecture_of_cofinal_classicalCenter_log_gain
+
+-- Middle-prime sieve, exact denominator, and complete weighted progression error.
+#print axioms TwinPrime.Analytic.card_large_prime_divisors_le
+#print axioms TwinPrime.Analytic.sum_Icc_div_eq_sum_dvd
+#print axioms TwinPrime.Analytic.sum_large_prime_modulus_multiples_eq
+#print axioms TwinPrime.Analytic.sum_large_prime_modulus_multiples_le
+#print axioms TwinPrime.Analytic.sum_large_prime_progressionMaxError_le_two
+#print axioms TwinPrime.Analytic.prime_eq_of_mul_eq_mul_of_primeFactors_lt
+#print axioms TwinPrime.Analytic.sum_largest_prime_modulus_multiples_le
+#print axioms TwinPrime.Analytic.sum_largest_prime_progressionMaxError_le
+#print axioms TwinPrime.Analytic.prime_coprime_of_dvd_oddPrimorial
+#print axioms TwinPrime.Analytic.middlePrimeSieve_multSum
+#print axioms TwinPrime.Analytic.middlePrimeSieve_abs_rem_le
+#print axioms TwinPrime.Analytic.middlePrimeSieve_siftedSum_le
+#print axioms TwinPrime.Analytic.middlePrimeSlice_nonneg
+#print axioms TwinPrime.Analytic.coprime_oddPrimorial_of_middlePrimeInputs
+#print axioms TwinPrime.Analytic.middlePrimeSlice_le_siftedSum
+#print axioms TwinPrime.Analytic.middlePrimeSlice_le_selberg_bound
+#print axioms TwinPrime.Analytic.middlePrimeSlice_eq_neg_bilinear
+#print axioms TwinPrime.Analytic.middlePrimeInputs_disjoint
+#print axioms TwinPrime.Analytic.middlePrimeMass_nonneg
+#print axioms TwinPrime.Analytic.middlePrimeMass_le_selberg_bound
+#print axioms TwinPrime.Analytic.dvd_oddPrimorial_of_odd_squarefree_le
+#print axioms TwinPrime.Analytic.middlePrimeSieve_selbergTerms_eq
+#print axioms TwinPrime.Analytic.middlePrimeSieve_selbergBoundingSum_eq
+#print axioms TwinPrime.Analytic.middlePrimeSelbergDenominator_pos
+#print axioms TwinPrime.Analytic.card_progression_le_div_add_one
+#print axioms TwinPrime.Analytic.progressionPsi_le_two_mul_div_mul_log
+#print axioms TwinPrime.Analytic.progressionMaxError_le_totient_trivial
+#print axioms TwinPrime.Analytic.div_totient_le_two_pow_omega
+#print axioms TwinPrime.Analytic.one_div_totient_le_two_pow_omega_div
+#print axioms TwinPrime.Analytic.squarefree_nine_pow_omega_mul_error_le
+#print axioms TwinPrime.Analytic.squarefreeWeightedProgressionError_nonneg
+#print axioms TwinPrime.Analytic.squarefree_weighted_progressionMaxError_sq_le
+#print axioms TwinPrime.Analytic.tendsto_log_pow_mul_squarefreeWeightedProgressionError_div_of_power_level
+#print axioms TwinPrime.Analytic.middlePrimeSieveErrorMass_nonneg
+#print axioms TwinPrime.Analytic.middlePrimeSieveErrorMass_le_weighted
+#print axioms TwinPrime.Analytic.middlePrimeMass_le_main_add_errorMass
+#print axioms TwinPrime.Analytic.tendsto_log_pow_mul_middlePrimeSieveErrorMass_div
+#check TwinPrime.Analytic.middlePrimeMass_le_main_add_errorMass
+#check TwinPrime.Analytic.tendsto_log_pow_mul_middlePrimeSieveErrorMass_div
+#check TwinPrime.Analytic.tendsto_log_pow_mul_squarefreeWeightedProgressionError_div_of_power_level
+#print axioms TwinPrime.Analytic.harmonic_quotient_normalized_bounds
+#print axioms TwinPrime.Analytic.tendsto_harmonic_quotient_normalized
+#print axioms TwinPrime.Analytic.tendsto_real_harmonic_convolution_div_log
+#print axioms TwinPrime.Analytic.tendsto_real_harmonic_convolution_div_log_of_zero
+#print axioms TwinPrime.Analytic.tendsto_harmonic_convolution_div_log
+#print axioms TwinPrime.Analytic.tendsto_harmonic_convolution_div_log_of_zero
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_apply
+#print axioms TwinPrime.Analytic.isMultiplicative_middlePrimeSelbergCoefficient
+#print axioms TwinPrime.Analytic.isMultiplicative_middlePrimeSelbergCorrection
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_one
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_one
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_prime
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_prime_pow_succ_succ
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_eq_zero_of_even
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_eq_kernel
+#print axioms TwinPrime.Analytic.sum_middlePrimeSelbergCoefficient_eq_denominator
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCoefficient_eq_convolution
+#print axioms TwinPrime.Analytic.middlePrimeSelbergDenominator_eq_harmonic_convolution
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_prime_pow_succ
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_two
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_odd_prime
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_prime_sq
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_prime_pow_succ_succ_succ
+#print axioms TwinPrime.Analytic.hasSum_middlePrimeSelbergCorrection_prime_pow
+#print axioms TwinPrime.Analytic.hasSum_norm_middlePrimeSelbergCorrection_prime_pow
+#print axioms TwinPrime.Analytic.hasSum_middlePrimeSelbergCorrection_two_pow
+#print axioms TwinPrime.Analytic.hasSum_norm_middlePrimeSelbergCorrection_two_pow
+#print axioms TwinPrime.Analytic.hasSum_middlePrimeSelbergCorrection_odd_prime_pow
+#print axioms TwinPrime.Analytic.hasSum_norm_middlePrimeSelbergCorrection_odd_prime_pow
+#print axioms TwinPrime.Analytic.summable_norm_middlePrimeSelbergCorrection
+#print axioms TwinPrime.Analytic.summable_middlePrimeSelbergCorrection
+#print axioms TwinPrime.Analytic.middlePrimeSelbergCorrection_eulerFactor_mul_smoothing
+#print axioms TwinPrime.Analytic.tsum_middlePrimeSelbergCorrection
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeSelbergDenominator_div_one_add_log
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeSelbergDenominator_div_log
+#print axioms TwinPrime.Analytic.tendsto_log_div_middlePrimeSelbergDenominator
+#print axioms TwinPrime.Analytic.middlePrimeSelbergDenominator_uniform_reciprocal_bound
+#print axioms TwinPrime.Analytic.eventually_middlePrimeMass_le_log_main_add_errorMass
+#check TwinPrime.Analytic.tsum_middlePrimeSelbergCorrection
+#check TwinPrime.Analytic.tendsto_middlePrimeSelbergDenominator_div_log
+#check TwinPrime.Analytic.eventually_middlePrimeMass_le_log_main_add_errorMass
+#print axioms TwinPrime.Analytic.realPrimeReciprocalSum_eq_sum_Icc
+#print axioms TwinPrime.Analytic.primeReciprocal_abel_centered_identity
+#print axioms TwinPrime.Analytic.abs_primeReciprocal_abel_error_le
+#print axioms TwinPrime.Analytic.abs_primeReciprocal_abel_error_le_of_continuous_deriv
+#print axioms TwinPrime.Analytic.sum_Ioc_reciprocal_pred_mul
+#print axioms TwinPrime.Analytic.sum_Ioc_reciprocal_pred_mul_le
+#print axioms TwinPrime.Analytic.abs_sum_prime_totient_sub_reciprocal_le
+#print axioms TwinPrime.Analytic.sum_mangoldt_reciprocal_sub_prime_eq
+#print axioms TwinPrime.Analytic.abs_sum_mangoldt_reciprocal_sub_prime_le
+#print axioms TwinPrime.Analytic.exists_abs_sum_mangoldt_reciprocal_sub_prime_bound
+#print axioms TwinPrime.Analytic.tendsto_sum_prime_totient_sub_reciprocal
+#print axioms TwinPrime.Analytic.tendsto_sum_mangoldt_reciprocal_sub_prime
+#print axioms TwinPrime.Analytic.middlePrimeIntegrand_eq_partial_fractions
+#print axioms TwinPrime.Analytic.contDiffOn_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.hasDerivAt_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.deriv_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.hasDerivAt_middlePrimeIntegralPrimitive
+#print axioms TwinPrime.Analytic.continuousOn_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.intervalIntegrable_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.integral_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.middlePrimeIntegrand_nonneg
+#print axioms TwinPrime.Analytic.abs_middlePrimeIntegrand_le
+#print axioms TwinPrime.Analytic.abs_middlePrimeIntegrandDerivative_le
+#print axioms TwinPrime.Analytic.abs_deriv_middlePrimeIntegrand_le
+#print axioms TwinPrime.Analytic.continuousOn_deriv_middlePrimeIntegrand
+#print axioms TwinPrime.Analytic.middlePrimeSieveThreshold_pos
+#print axioms TwinPrime.Analytic.middlePrimePowerCutoff_bounds
+#print axioms TwinPrime.Analytic.eventually_mul_middlePrimePowerCutoff_le
+#print axioms TwinPrime.Analytic.middlePrimePowerCutoff_lt_cube
+#print axioms TwinPrime.Analytic.middlePrimeSieveThreshold_lt
+#print axioms TwinPrime.Analytic.middlePrimeSieveThreshold_level
+#print axioms TwinPrime.Analytic.eventually_middlePrimeSieveThreshold_ge
+#print axioms TwinPrime.Analytic.eventually_middlePrimeSieveThreshold_support
+#print axioms TwinPrime.Analytic.eventually_middlePrimeSieveThreshold_active_ge
+#print axioms TwinPrime.Analytic.abs_log_middlePrimeSieveThreshold_sub_half_log_le
+#print axioms TwinPrime.Analytic.eventually_abs_log_middlePrimeSieveThreshold_sub_half_log_le
+#print axioms TwinPrime.Analytic.integral_logScaleTestFunction_div
+#print axioms TwinPrime.Analytic.abs_logScaleTestFunction_variation_le
+#print axioms TwinPrime.Analytic.abs_logScale_primeReciprocal_error_le
+#print axioms TwinPrime.Analytic.exists_logScalePrimeReciprocalSum_error_bound
+#print axioms TwinPrime.Analytic.tendsto_logScalePrimeReciprocalSum
+#print axioms TwinPrime.Analytic.tendsto_logScalePrimeReciprocalSum_nat
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeIntegrand_reciprocalSum
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeIntegrand_reciprocalSum_nat
+#print axioms TwinPrime.Analytic.middlePrimePowerCutoff_le_input
+#print axioms TwinPrime.Analytic.tendsto_log_pow_mul_middlePrimePowerSieveError_div
+#print axioms TwinPrime.Analytic.tendsto_middlePrimePowerSieveFullError_div
+#print axioms TwinPrime.Analytic.eventually_middlePrimePowerMass_div_le_main_add_error
+#print axioms TwinPrime.Analytic.middlePrimeLogCoordinate_bounds
+#print axioms TwinPrime.Analytic.middlePrimeIdealWeight_bounds
+#print axioms TwinPrime.Analytic.abs_log_middlePrimeSieveThreshold_sub_power_half_le_two
+#print axioms TwinPrime.Analytic.eventually_middlePrimeActualWeight_sub_ideal_le
+#print axioms TwinPrime.Analytic.eventually_middlePrimeActualWeight_sub_ideal_le_epsilon
+#print axioms TwinPrime.Analytic.eventually_middlePrimeActualWeight_bounds
+#print axioms TwinPrime.Analytic.eventually_abs_middlePrimeActualWeight_le
+#print axioms TwinPrime.Analytic.sum_middlePrime_reciprocal_le_primeReciprocalSum
+#print axioms TwinPrime.Analytic.eventually_sum_middlePrime_reciprocal_le
+#print axioms TwinPrime.Analytic.middlePrimeSieveMainConstant_eq_integral
+#print axioms TwinPrime.Analytic.log_one_add_le_cubic
+#print axioms TwinPrime.Analytic.middlePrimeSieveMainConstant_fixed_lt
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeIdealWeight_reciprocalSum
+#print axioms TwinPrime.Analytic.tendsto_middlePrimeActualWeight_sub_ideal_reciprocalSum
+#print axioms TwinPrime.Analytic.tendsto_middlePrimePowerMainSum
+#print axioms TwinPrime.Analytic.eventually_middlePrimePowerMass_div_le
+#print axioms TwinPrime.Analytic.eventually_middlePrimePowerMass_le
+#print axioms TwinPrime.Analytic.eventually_middlePrimeMass_twentyOneHundredths_le
+#check TwinPrime.Analytic.tendsto_middlePrimePowerMainSum
+#check TwinPrime.Analytic.eventually_middlePrimePowerMass_div_le
+#check TwinPrime.Analytic.eventually_middlePrimeMass_twentyOneHundredths_le

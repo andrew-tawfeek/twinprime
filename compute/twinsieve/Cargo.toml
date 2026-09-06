@@ -1,0 +1,10 @@
+[package]
+name = "twinsieve"
+version = "0.1.0"
+edition = "2021"
+description = "Multithreaded segmented sieve: exact twin-prime counts, Brun partial sums, Hardy-Littlewood comparison"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
